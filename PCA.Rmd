@@ -14,8 +14,17 @@ output:
 editor_options: 
   markdown: 
     wrap: 200
-  chunk_output_type: console
+  chunk_output_type: inline
 ---
+
+```{css, echo=FALSE}
+.scroll-100 {
+  max-height: 100px;
+  overflow-y: auto;
+  background-color: inherit;
+}
+```
+
 
 
 ```{r install package, eval=FALSE, include=FALSE}
@@ -32,29 +41,21 @@ BiocManager::install("SNPRelate")
 
 
 ```{r setup, cache=TRUE, include=FALSE}
-#knitr::opts_chunk$set(echo = FALSE)
+knitr::opts_chunk$set(echo = FALSE)
 library(SeqArray)
 library(GENESIS)
 library(Biobase)
 library(SeqVarTools)
 library(SNPRelate)
 library(dplyr)
-#library(RColorBrewer)
 library(ggplot2)
-#library(GGally)
 library(ggrepel)
 library(hrbrthemes)
 ```
 
-
-Reference of the pipeline: 
-https://bioconductor.org/packages/release/bioc/vignettes/PCAtools/inst/doc/PCAtools.html
-https://popgen.nescent.org/2015-12-15-microsatellite-differentiation.html
-
-
 # 1 Convert VCF to GDS
 
-```{r VCF to GDS, message=FALSE, warning=FALSE, cache=TRUE}
+```{r VCF to GDS, message=FALSE, warning=FALSE, cache=TRUE, class.output="scroll-100"}
 seqVCF2GDS("deepvariant.cohort_filtered.vcf.gz", "deepvariant.cohort_filtered.gcf")
 
 showfile.gds(closeall = TRUE)
@@ -105,7 +106,7 @@ seqData <- SeqVarData(gds, sampleData = annot)
 
 These plots help to visualize population structure in the sample and identify clusters of individuals with similar ancestry.
 
-```{r PC-AiR, message=FALSE, warning=FALSE, cache=TRUE}
+```{r PC-AiR, message=FALSE, warning=FALSE, cache=TRUE, class.output="scroll-100"}
 # subset of SNPs that are in approximate linkage equilibrium with each other
 snpset <-
   snpgdsLDpruning(
@@ -224,11 +225,13 @@ p <- pca(mat, metadata = metadata, removeVar = 0.1)
 
 ## PCA with  metadata
 
-```{r correlation and pca range, cache=TRUE}
+```{r correlation and pca range, cache=TRUE, layout="l-body-outset"}
 
 annot_1 <- read.csv("sample_w_ID.list", sep = "\t")
+
 #sanity check
-#annot$sample.id == pcs$sample.id
+all.equal(annot_1$sample.id, as.numeric(pcs$sample.id)) #### It has to be TRUE!
+
 
 PCA_name <- colnames(p$rotated[1:32])
 colnames(pcs$vectors) <- PCA_name
@@ -251,8 +254,9 @@ biplot( p, lab = p$metadata$Province, #change the metata to plot
 
 ## Pairs plot
 
-```{r message=FALSE, warning=FALSE, include=FALSE, cache=TRUE}
-pairsplot(p)
+```{r message=FALSE, warning=FALSE, include=FALSE, cache=TRUE, layout="l-body-outset"}
+plot_pair <- pairsplot(p)
+plot_pair
 ```
 
 
@@ -264,8 +268,8 @@ dev.off()
 ```
 
 ## Corelation plot
-```{r cor plot, message=FALSE, warning=FALSE, include=FALSE, cache=TRUE}
-eigencorplot(
+```{r cor plot, message=FALSE, warning=FALSE, include=FALSE, cache=TRUE, layout="l-body-outset"}
+pl <- eigencorplot(
   p,
   components = getComponents(p, 1:10),
   metavars = c(
@@ -293,6 +297,7 @@ eigencorplot(
   signifSymbols = c('****', '***', '**', '*', ''),
   signifCutpoints = c(0, 0.0001, 0.001, 0.01, 0.05, 1)
 )
+pl
 ```
 
 ```{r eigencorplot plot, message=FALSE, warning=FALSE, cache=TRUE}
@@ -346,7 +351,7 @@ Axis_PC2<-paste0("PC2 (",specify_decimal(pcs$values[2],2),"%)")
 
 ```
 
-```{r PCA Cultivating.status, message=FALSE, warning=FALSE, cache=TRUE}
+```{r PCA Cultivating.status, message=FALSE, warning=FALSE, cache=TRUE, layout="l-body-outset"}
 
 # PCA With domestic vs wild populations
 
@@ -395,7 +400,7 @@ ggsave(
 
 ## Population name
 
-```{r PCA Population.name, message=FALSE, warning=FALSE, cache=TRUE}
+```{r PCA Population.name, message=FALSE, warning=FALSE, cache=TRUE, layout="l-body-outset"}
 
 
 # Formating the color for the PCA
@@ -447,7 +452,7 @@ ggsave(
 
 ## Hiseq Lane
 
-```{r PCA HiSeq Lane, message=FALSE, warning=FALSE, cache=TRUE}
+```{r PCA HiSeq Lane, message=FALSE, warning=FALSE, cache=TRUE, layout="l-body-outset"}
 
 # PCA With domestic vs wild populations
 ggplot(pc.df, aes(PC1, PC2, color = HiSeq.Lane)) +
@@ -493,7 +498,7 @@ ggsave(
 
 ## Library pool
 
-```{r PCA Library pool, message=FALSE, warning=FALSE, cache=TRUE}
+```{r PCA Library pool, message=FALSE, warning=FALSE, cache=TRUE, layout="l-body-outset"}
 # PCA With domestic vs wild populations
 ggplot(pc.df, aes(x = PC1, y = PC2, color = Library.pool)) +
   geom_point(size = 5) +
@@ -537,4 +542,9 @@ ggsave(
 ```
 
 
+
+
+Reference of the pipeline: 
+https://bioconductor.org/packages/release/bioc/vignettes/PCAtools/inst/doc/PCAtools.html
+https://popgen.nescent.org/2015-12-15-microsatellite-differentiation.html
 
