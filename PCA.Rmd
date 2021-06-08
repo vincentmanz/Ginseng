@@ -1,14 +1,19 @@
 ---
 title: "PCA pipeline"
 description: |
-  Blablabla
+  PCA analyses for "Target capture reveals complex origin of Vietnamese ginseng"
 author:
   - name: Vincent Manzanilla 
-    url: https://github.com/vincentmanz/Ginseng
-    affiliation: postdoc at BAseClear/ Analyst at datalabs
+    url: https://github.com/vincentmanz/
+    affiliation: Postdoc at BaseClear/ Analyst at Data.Labs
 date: "`r Sys.Date()`"
-output: distill::distill_article
+output:
+  distill::distill_article:
+    toc: true
+    toc_depth: 3
 editor_options: 
+  markdown: 
+    wrap: 200
   chunk_output_type: console
 ---
 
@@ -26,26 +31,32 @@ BiocManager::install("SNPRelate")
 
 
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
+```{r setup, cache=TRUE, include=FALSE}
+#knitr::opts_chunk$set(echo = FALSE)
 library(SeqArray)
 library(GENESIS)
 library(Biobase)
 library(SeqVarTools)
 library(SNPRelate)
 library(dplyr)
-library(RColorBrewer)
+#library(RColorBrewer)
 library(ggplot2)
-library(GGally)
+#library(GGally)
 library(ggrepel)
+library(hrbrthemes)
 ```
+
+
+Reference of the pipeline: 
+https://bioconductor.org/packages/release/bioc/vignettes/PCAtools/inst/doc/PCAtools.html
+https://popgen.nescent.org/2015-12-15-microsatellite-differentiation.html
 
 
 # 1 Convert VCF to GDS
 
-```{r VCF to GDS, message=FALSE, warning=FALSE}
-seqVCF2GDS("deepvariant.cohort_round2.vcf.gz",
-           "deepvariant.cohort_filtered.gcf")
+```{r VCF to GDS, message=FALSE, warning=FALSE, cache=TRUE}
+seqVCF2GDS("deepvariant.cohort_filtered.vcf.gz", "deepvariant.cohort_filtered.gcf")
+
 showfile.gds(closeall = TRUE)
 gds <- seqOpen("deepvariant.cohort_filtered.gcf")
 gds
@@ -55,12 +66,20 @@ gds
 
 Note: the order of the samples in the vcf file and in the annot file is important and it has to be coded as characters
 
-```{r SeqVarData, message=FALSE, warning=FALSE}
+```{r SeqVarData, message=FALSE, warning=FALSE, cache=TRUE}
 annot <-
   read.csv(
-    "../sample_w_ID.list",
+    "sample_w_ID.list",
     sep = "\t",
     colClasses = c(
+      "character",
+      "character",
+      "character",
+      "character",
+      "character",
+      "character",
+      "character",
+      "character",
       "character",
       "character",
       "character",
@@ -68,17 +87,15 @@ annot <-
       "character"
     )
   )
-head(annot)
 
 metadata <-
   data.frame(
-    labelDescription = c("Pop_names", "Regrouping ", "Coordinates", "Wild", "sample.id"),
+    labelDescription = c("Sample ID", "Cultivating status ", "HiSeq Lane", "Experiment", "Coordinates", "Population name","Province", "District", "Commune", "Locality", "Sample type", "Concentration ng/µL", "A260.A280"),
     row.names = names(annot)
   )
 annot <- AnnotatedDataFrame(annot, metadata)
-metadata
-annot
-all.equal(annot$sample.id, seqGetData(gds, "sample.id")) #### It has to be TRUE!
+
+  all.equal(annot$sample.id, seqGetData(gds, "sample.id")) #### It has to be TRUE!
 seqData <- SeqVarData(gds, sampleData = annot)
 ```
 
@@ -88,7 +105,7 @@ seqData <- SeqVarData(gds, sampleData = annot)
 
 These plots help to visualize population structure in the sample and identify clusters of individuals with similar ancestry.
 
-```{r PC-AiR, message=FALSE, warning=FALSE}
+```{r PC-AiR, message=FALSE, warning=FALSE, cache=TRUE}
 # subset of SNPs that are in approximate linkage equilibrium with each other
 snpset <-
   snpgdsLDpruning(
@@ -116,17 +133,205 @@ pcs <-
     div.thresh = -0.6,
     snp.include = pruned,
     autosome.only = FALSE,
-    num.cores = 10
+    num.cores = 20
   )
 summary(pcs)
 # The eigenvalues for the top PCs are also shown, which can assist in determining the number of PCs that reflect structure
-
 ```
 
 # 4 plotting!
 
+```{r dummy pca, message=FALSE, warning=FALSE, include=FALSE, cache=TRUE}
+# https://bioconductor.org/packages/release/bioc/vignettes/PCAtools/inst/doc/PCAtools.html
+library(Biobase)
+library(GEOquery)
 
-```{r format df, message=FALSE, warning=FALSE}
+# load series and platform data from GEO
+gset <- getGEO('GSE2990', GSEMatrix = TRUE, getGPL = FALSE)
+mat <- exprs(gset[[1]])
+
+# remove Affymetrix control probes
+mat <- mat[-grep('^AFFX', rownames(mat)), ]
+
+# extract information of interest from the phenotype data (pdata)
+idx <- which(
+  colnames(pData(gset[[1]])) %in%
+    c(
+      'relation',
+      'age:ch1',
+      'distant rfs:ch1',
+      'er:ch1',
+      'ggi:ch1',
+      'grade:ch1',
+      'size:ch1',
+      'time rfs:ch1'
+    )
+)
+metadata <- data.frame(pData(gset[[1]])[, idx],
+                       row.names = rownames(pData(gset[[1]])))
+
+# tidy column names
+colnames(metadata) <-
+  c('Study',
+    'Age',
+    'Distant.RFS',
+    'ER',
+    'GGI',
+    'Grade',
+    'Size',
+    'Time.RFS')
+
+# prepare certain phenotypes of interest
+metadata$Study <-
+  gsub('Reanalyzed by: ', '', as.character(metadata$Study))
+metadata$Age <-
+  as.numeric(gsub('^KJ', NA, as.character(metadata$Age)))
+metadata$Distant.RFS <- factor(metadata$Distant.RFS,
+                               levels = c(0, 1))
+metadata$ER <-
+  factor(gsub('\\?', NA, as.character(metadata$ER)),
+         levels = c(0, 1))
+metadata$ER <- factor(ifelse(metadata$ER == 1, 'ER+', 'ER-'),
+                      levels = c('ER-', 'ER+'))
+metadata$GGI <- as.numeric(as.character(metadata$GGI))
+metadata$Grade <-
+  factor(gsub('\\?', NA, as.character(metadata$Grade)),
+         levels = c(1, 2, 3))
+metadata$Grade <-
+  gsub(1, 'Grade 1', gsub(2, 'Grade 2', gsub(3, 'Grade 3', metadata$Grade)))
+metadata$Grade <-
+  factor(metadata$Grade, levels = c('Grade 1', 'Grade 2', 'Grade 3'))
+metadata$Size <- as.numeric(as.character(metadata$Size))
+metadata$Time.RFS <-
+  as.numeric(gsub('^KJX|^KJ', NA, metadata$Time.RFS))
+
+# remove samples from the pdata that have any NA value
+discard <- apply(metadata, 1, function(x)
+  any(is.na(x)))
+metadata <- metadata[!discard, ]
+
+# filter the expression data to match the samples in our pdata
+mat <- mat[, which(colnames(mat) %in% rownames(metadata))]
+
+# check that sample names match exactly between pdata and expression data
+all(colnames(mat) == rownames(metadata))
+detach("package:SeqVarTools", unload = TRUE)
+library(PCAtools)
+p <- pca(mat, metadata = metadata, removeVar = 0.1)
+
+
+```
+
+## PCA with  metadata
+
+```{r correlation and pca range, cache=TRUE}
+
+annot_1 <- read.csv("sample_w_ID.list", sep = "\t")
+#sanity check
+#annot$sample.id == pcs$sample.id
+
+PCA_name <- colnames(p$rotated[1:32])
+colnames(pcs$vectors) <- PCA_name
+p$rotated <- pcs$vectors
+p$components <- PCA_name
+p$yvars <- pcs$sample.id
+p$xvars <- row.names(pcs$vectors)
+p$metadata <- annot_1
+p$variance <- setNames(as.numeric(pcs$values), PCA_name)
+p$loadings <- c(0, 0)
+biplot(p)
+
+biplot( p, lab = p$metadata$Province, #change the metata to plot
+  hline = 0,
+  vline = 0,
+  legendPosition = 'right'
+)
+```
+
+
+## Pairs plot
+
+```{r message=FALSE, warning=FALSE, include=FALSE, cache=TRUE}
+pairsplot(p)
+```
+
+
+```{r Pairs plot, message=FALSE, warning=FALSE, cache=TRUE}
+pdf(file="PCA ~ pairsplot.pdf", width=20,height=10 )
+pairsplot(p)
+dev.off()
+
+```
+
+## Corelation plot
+```{r cor plot, message=FALSE, warning=FALSE, include=FALSE, cache=TRUE}
+eigencorplot(
+  p,
+  components = getComponents(p, 1:10),
+  metavars = c(
+    'Cultivating.status',
+    'HiSeq.Lane',
+    'Library.pool',
+    'Population.name',
+    'District',
+    'Province',
+    'Sample.type',
+    'Conc..ng.µL.',
+    'A260.A280'
+  ),
+  col = c('white', 'cornsilk1', 'gold', 'forestgreen', 'darkgreen'),
+  cexCorval = 1.2,
+  fontCorval = 2,
+  posLab = 'all',
+  rotLabX = 45,
+  scale = TRUE,
+  main = bquote(Principal ~ component ~ Pearson ~ r ^ 2 ~ metadata ~ correlates),
+  plotRsquared = TRUE,
+  corFUN = 'pearson',
+  corUSE = 'pairwise.complete.obs',
+  corMultipleTestCorrection = 'BH',
+  signifSymbols = c('****', '***', '**', '*', ''),
+  signifCutpoints = c(0, 0.0001, 0.001, 0.01, 0.05, 1)
+)
+```
+
+```{r eigencorplot plot, message=FALSE, warning=FALSE, cache=TRUE}
+pdf(file="PCA ~ Pearson ~ r^2 ~ metadata ~ correlates.pdf", width=20,height=10 )
+eigencorplot(
+  p,
+  components = getComponents(p, 1:10),
+  metavars = c(
+    'Cultivating.status',
+    'HiSeq.Lane',
+    'Library.pool',
+    'Population.name',
+    'District',
+    'Province',
+    'Sample.type',
+    'Conc..ng.µL.',
+    'A260.A280'
+  ),
+  col = c('white', 'cornsilk1', 'gold', 'forestgreen', 'darkgreen'),
+  cexCorval = 1.2,
+  fontCorval = 2,
+  posLab = 'all',
+  rotLabX = 45,
+  scale = TRUE,
+  main = bquote(Principal ~ component ~ Pearson ~ r ^ 2 ~ metadata ~ correlates),
+  plotRsquared = TRUE,
+  corFUN = 'pearson',
+  corUSE = 'pairwise.complete.obs',
+  corMultipleTestCorrection = 'BH',
+  signifSymbols = c('****', '***', '**', '*', ''),
+  signifCutpoints = c(0, 0.0001, 0.001, 0.01, 0.05, 1)
+)
+dev.off()
+
+```
+
+## Cultivating status
+
+```{r format df, message=FALSE, warning=FALSE, cache=TRUE}
 
 # Formating the df
 pc.df <- as.data.frame(pcs$vectors)
@@ -139,39 +344,197 @@ specify_decimal <- function(x, k) trimws(format(round(x, k), nsmall=k))
 Axis_PC1<-paste0("PC1 (",specify_decimal(pcs$values[1],2),"%)")
 Axis_PC2<-paste0("PC2 (",specify_decimal(pcs$values[2],2),"%)")
 
-# Formating the color for the PCA
-  #find the palette at https://medialab.github.io/iwanthue/
-pop.cols <- setNames(c("#00aad7", "#9dcfef", "#0098ff", "#76d2ac", "#d24d70", "#b7000c", "#d4ab9c", "#925036", "#ff7800", "#cdd94c", "#75833a", "#3b4245", "#5a8272", "#64419d", "#ff62ff", "#cd52be", "#90ff39", "#74d255"),
-                     c("DacVien", "LocBong", "MangRuong", "ConPin", "MangLung", "TakLan", "TakNgo", "TakRang", "TakTui", "TraLinh_H3", "TraLinh_drug_materials_farm", "Xop", "ChungTam", "ChOm", "PhuocLoc", "MuongHoong", "TraCang_H3", "TraNam"))
 ```
 
-```{r PCAs, message=FALSE, warning=FALSE}
+```{r PCA Cultivating.status, message=FALSE, warning=FALSE, cache=TRUE}
 
 # PCA With domestic vs wild populations
-pdf(file="PCA_wild_vs_domesticated.pdf ",width=20,height=10 )
-ggplot(pc.df, aes(PC1, PC2, color=Wild)) + 
-  geom_point() + 
-  geom_label_repel(aes(label = sample.id), box.padding   = 0.15, point.padding = 0.2, segment.color = 'grey50') + 
-  xlab(Axis_PC1) + ylab(Axis_PC2) + ggtitle("PCA - DV + MD 1203 SNPs - Wild vs Cultivated populations")
-# PCA With domestic vs wild populations - NO LABELS
-ggplot(pc.df, aes(PC1, PC2, color=Wild)) + 
-  geom_point() + 
-  xlab(Axis_PC1) + ylab(Axis_PC2) + ggtitle("PCA - DV + MD 1203 SNPs - Wild vs Cultivated populations")
-dev.off()
 
-# PCA with the population data
-pdf(file="PCA_populations.pdf ",width=20,height=10 ) #open file
-ggplot(pc.df, aes(PC1, PC2, color=Pop_names)) + 
-  geom_point() + 
-  geom_label_repel(aes(label = sample.id), box.padding   = 0.15, point.padding = 0.2, segment.color = 'grey50') + 
-  xlab(Axis_PC1) + ylab(Axis_PC2) + ggtitle("PCA - DV + MD 1203 SNPs - Population") +
-  scale_color_manual(values=pop.cols)
-# PCA with the population data - NO LABELS
-ggplot(pc.df, aes(PC1, PC2,color=Pop_names)) + 
-  geom_point(size=3) + 
-  xlab(Axis_PC1) + ylab(Axis_PC2) + ggtitle("PCA - DV + MD 1203 SNPs - Population") +
-  scale_color_manual(values=pop.cols)
-dev.off() #close files
+ggplot(pc.df, aes(PC1, PC2, color = Cultivating.status)) +
+  geom_point(size = 5) +
+  geom_label_repel(
+    aes(label = sample.id),
+    box.padding   = 0.15,
+    point.padding = 0.5,
+    segment.color = "grey50",
+        max.time = 1,
+    max.iter = 2000,
+    max.overlaps	= 12
+  ) +
+  xlab(Axis_PC1) +
+  ylab(Axis_PC2) +
+  ggtitle("Wild vs Cultivated populations", subtitle = "Variant calling with Deep Variant, the duplicate reads were marked.\n A total of 1181 SNPs.") +
+  theme_ipsum(axis_title_size = 11) +
+  scale_color_manual(values = c("#001852", "#E01F54"))
+
+ggsave(
+  filename = "Wild vs Cultivated populations - labels.png",
+  device = "png",
+  width = 20,
+  height = 10
+)
+
+# PCA With domestic vs wild populations - NO LABELS
+ggplot(pc.df, aes(PC1, PC2, color = Cultivating.status)) +
+  geom_point(size = 5) +
+  xlab(Axis_PC1) +
+  ylab(Axis_PC2) +
+  ggtitle("Wild vs Cultivated populations", subtitle = "Variant calling with Deep Variant, the duplicate reads were marked.\n A total of 1181 SNPs.") +
+  theme_ipsum(axis_title_size = 11) +
+  scale_color_manual(values = c("#001852", "#E01F54"))
+
+ggsave(
+  filename = "Wild vs Cultivated populations - nolabels.png",
+  device = "png",
+  width = 20,
+  height = 10
+)
+
 
 ```
+
+## Population name
+
+```{r PCA Population.name, message=FALSE, warning=FALSE, cache=TRUE}
+
+
+# Formating the color for the PCA
+#find the palette at https://medialab.github.io/iwanthue/
+pop.cols <- setNames(c("#6c332e", "#71cc4d", "#703ac4", "#d2d94a", "#c94abd", "#62cd98", "#d04430", "#6e6dd0", "#b69d43", "#4f2b63", "#c5d39d", "#c94670",
+                       "#7bbfc7", "#c7783b", "#7089b8", "#536e39", "#c98bc2", "#384241", "#c99992"),
+                     c("Ch'Ơm","ChungTam","ConPin", "ĐắkViên", "LộcBông", "MăngLùng", "MăngRương", "MườngHoong", "PhướcLộc","TắkLan", "TắkNgo", "TắkRâng",
+                       "TắkTúi", "TràCang_H3", "TraLinh_drug_materials_farm", "TràLinh_H3", "TràNam", "Xốp", "MôLút"))
+
+# PCA with the population data
+  ggplot(pc.df, aes(PC1, PC2, color = Population.name)) +
+  geom_point(size = 5) +
+  geom_label_repel(
+    aes(label = sample.id),
+    box.padding   = 0.15,
+    point.padding = 0.2,
+    segment.color = 'grey50',
+    max.time = 1,
+    max.iter = 2000,
+    max.overlaps	= 12
+  ) +
+  xlab(Axis_PC1) + ylab(Axis_PC2) + 
+  ggtitle("Panax vietnamensis populations", subtitle = "Variant calling with Deep Variant, the duplicate reads were marked.\n A total of 1181 SNPs.") +
+  theme_ipsum(axis_title_size = 11) +
+  scale_color_manual(values = pop.cols)
+  ggsave(
+  filename = "Panax vietnamensis populations - labels.png",
+  device = "png",
+  width = 20,
+  height = 10
+)
+
+# PCA with the population data - NO LABELS
+PCA_pop_names_nolabels <-
+  ggplot(pc.df, aes(PC1, PC2, color = Population.name)) +
+  geom_point(size = 5) +
+  xlab(Axis_PC1) + ylab(Axis_PC2) + 
+  ggtitle("Panax vietnamensis populations", subtitle = "Variant calling with Deep Variant, the duplicate reads were marked.\n A total of 1181 SNPs.") +
+  theme_ipsum(axis_title_size = 11) +
+  scale_color_manual(values = pop.cols)
+ggsave(
+  filename = "Panax vietnamensis populations - nolabels.png",
+  device = "png",
+  width = 20,
+  height = 10
+)
+
+```
+
+## Hiseq Lane
+
+```{r PCA HiSeq Lane, message=FALSE, warning=FALSE, cache=TRUE}
+
+# PCA With domestic vs wild populations
+ggplot(pc.df, aes(PC1, PC2, color = HiSeq.Lane)) +
+  geom_point(size = 5) +
+  geom_label_repel(
+    aes(label = sample.id),
+    box.padding   = 0.15,
+    point.padding = 0.5,
+    segment.color = "grey50",
+        max.time = 1,
+    max.iter = 2000,
+    max.overlaps	= 12
+  ) +
+  xlab(Axis_PC1) +
+  ylab(Axis_PC2) +  
+  ggtitle("HiSeq Lane", subtitle = "Variant calling with Deep Variant, the duplicate reads were marked.\n A total of 1181 SNPs.") +
+  theme_ipsum(axis_title_size = 11) +
+  scale_color_manual(values = c("#001852", "#E01F54"))
+
+ggsave(
+  filename = "HiSeq Lane - labels.png",
+  device = "png",
+  width = 20,
+  height = 10
+)
+
+# PCA With domestic vs wild populations - NO LABELS
+ggplot(pc.df, aes(PC1, PC2, color = HiSeq.Lane)) +
+  geom_point(size = 5) +
+  xlab(Axis_PC1) +
+  ylab(Axis_PC2) +
+  ggtitle("HiSeq Lane", subtitle = "Variant calling with Deep Variant, the duplicate reads were marked.\n A total of 1181 SNPs.") +
+  theme_ipsum(axis_title_size = 11) +
+  scale_color_manual(values = c("#001852", "#E01F54"))
+
+ggsave(
+  filename = "HiSeq Lane - nolabels.png",
+  device = "png",
+  width = 20,
+  height = 10
+)
+```
+
+## Library pool
+
+```{r PCA Library pool, message=FALSE, warning=FALSE, cache=TRUE}
+# PCA With domestic vs wild populations
+ggplot(pc.df, aes(x = PC1, y = PC2, color = Library.pool)) +
+  geom_point(size = 5) +
+  geom_label_repel(
+    aes(label = sample.id),
+    box.padding   = 0.15,
+    point.padding = 0.5,
+    segment.color = "grey50",
+        max.time = 1,
+    max.iter = 2000,
+    max.overlaps	= 12
+  ) +
+  xlab(Axis_PC1) +
+  ylab(Axis_PC2) +
+  ggtitle("Library pool", subtitle = "Variant calling with Deep Variant, the duplicate reads were marked.\n A total of 1181 SNPs.") +
+  theme_ipsum(axis_title_size = 11) +
+  scale_color_manual(values = c("#c1232b","#27727b", "#fcce10", "#e87c25", "#b5c334", "#fe8463"))
+
+ggsave(
+  filename = "Library pool - labels.png",
+  device = "png",
+  width = 20,
+  height = 10
+)
+
+# PCA With domestic vs wild populations - NO LABELS
+ggplot(pc.df, aes(PC1, PC2, color = Library.pool)) +
+  geom_point(size = 5) +
+  xlab(Axis_PC1) +
+  ylab(Axis_PC2) +
+  ggtitle("Library pool", subtitle = "Variant calling with Deep Variant, the duplicate reads were marked.\n A total of 1181 SNPs.") +
+  theme_ipsum(axis_title_size = 11) +
+  scale_color_manual(values = c("#c1232b","#27727b", "#fcce10", "#e87c25", "#b5c334", "#fe8463"))
+
+ggsave(
+  filename = "Library pool - nolabels.png",
+  device = "png",
+  width = 20,
+  height = 10
+)
+```
+
+
 

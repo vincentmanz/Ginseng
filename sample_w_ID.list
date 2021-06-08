@@ -1,0 +1,283 @@
+sample.id	Cultivating status	HiSeq Lane	Library pool	Coordinates (N, E)	Population name	Province	District	Commune	Locality	Sample type	Conc.(ng/µL)	A260/A280
+1	Cultivated	5	LP4	14.9710, 107.8950	ChungTam	Kon Tum	Tu Mơ Rông	Măng Ri	Chung Tam	Leave	21.2	1.92
+10	Cultivated	5	LP4	15.0318, 107.9791	TraLinh_drug_materials_farm	Quảng Nam	Nam Trà My	Trà Linh	Trà Linh drug materials farm	Leave	48.5	1.52
+100	Cultivated	5	LP4	15.0117, 108.0076	TắkLan	Quảng Nam	Nam Trà My	Trà Linh	Tắk Lan	Leave	84	1.79
+101	Cultivated	5	LP4	15.0117, 108.0076	TắkLan	Quảng Nam	Nam Trà My	Trà Linh	Tắk Lan	Leave	68.7	1.95
+102	Cultivated	5	LP4	15.0117, 108.0076	TắkLan	Quảng Nam	Nam Trà My	Trà Linh	Tắk Lan	Leave	94.3	1.8
+103	Cultivated	5	LP4	15.0117, 108.0076	TắkLan	Quảng Nam	Nam Trà My	Trà Linh	Tắk Lan	Leave	47.7	1.69
+104	Cultivated	5	LP4	15.0117, 108.0076	TắkLan	Quảng Nam	Nam Trà My	Trà Linh	Tắk Lan	Leave	59.8	1.96
+105	Wild	5	LP5	15.0760, 107.8320	Xốp	Kon Tum	Đắk Glei	Xop		Leave	54.5	2.05
+106	Wild	5	LP5	15.1250, 107.9120	MườngHoong	Kon Tum	Đắk Glei	Mường Hoong		Leave	52	2
+107	Wild	5	LP5	15.1250, 107.9121	MườngHoong	Kon Tum	Đắk Glei	Mường Hoong		Leave	48.4	1.85
+108	Cultivated	5	LP5	14.9708, 107.9990	MăngRương	Kon Tum	Tu Mơ Rông	Ngọk Lây	Măng Rương	Leave	49.4	1.71
+11	Cultivated	5	LP4	15.0318, 107.9791	TraLinh_drug_materials_farm	Quảng Nam	Nam Trà My	Trà Linh	Trà Linh drug materials farm	Leave	25.2	1.78
+110	Wild	5	LP5	15.1250, 107.9122	MườngHoong	Kon Tum	Đắk Glei	Mường Hoong		Leave	40.7	2.06
+111	Wild	5	LP5	15.0620, 107.9440	MôLút	Kon Tum	Đắk Glei	Ngọc Linh	Mo Lut 1	Leave	63.9	1.84
+112	Cultivated	5	LP5	14.9708, 107.9990	MăngRương	Kon Tum	Tu Mơ Rông	Ngọk Lây	Măng Rương	Leave	22.1	1.58
+113	Cultivated	5	LP4	15.0094, 108.0308	TắkNgo	Quảng Nam	Nam Trà My	Trà Linh	Tắk Ngo	Leave	71.5	1.72
+114	Cultivated	5	LP4	15.0094, 108.0308	TắkNgo	Quảng Nam	Nam Trà My	Trà Linh	Tắk Ngo	Leave	28.1	1.66
+115	Cultivated	5	LP4	15.0094, 108.0308	TắkNgo	Quảng Nam	Nam Trà My	Trà Linh	Tắk Ngo	Leave	20.2	1.55
+116	Cultivated	5	LP4	15.0094, 108.0308	TắkNgo	Quảng Nam	Nam Trà My	Trà Linh	Tắk Ngo	Leave	94.8	1.77
+117	Cultivated	5	LP4	15.0094, 108.0308	TắkNgo	Quảng Nam	Nam Trà My	Trà Linh	Tắk Ngo	Leave	95.3	1.76
+118	Cultivated	5	LP4	15.0094, 108.0308	TắkNgo	Quảng Nam	Nam Trà My	Trà Linh	Tắk Ngo	Leave	85.2	1.74
+119	Cultivated	5	LP4	15.0094, 108.0308	TắkNgo	Quảng Nam	Nam Trà My	Trà Linh	Tắk Ngo	Root	36	1.75
+12	Cultivated	5	LP4	15.0318, 107.9791	TraLinh_drug_materials_farm	Quảng Nam	Nam Trà My	Trà Linh	Trà Linh drug materials farm	Leave	23.3	1.57
+120	Cultivated	5	LP4	15.0094, 108.0308	TắkNgo	Quảng Nam	Nam Trà My	Trà Linh	Tắk Ngo	Leave	80.3	1.74
+126	Cultivated	5	LP4	14.9710, 107.8950	ChungTam	Kon Tum	Tu Mơ Rông	Măng Ri	Chung Tam	Leave	36.7	1.64
+127	Cultivated	5	LP4	14.9710, 107.8950	ChungTam	Kon Tum	Tu Mơ Rông	Măng Ri	Chung Tam	Leave	14.8	1.6
+129	Cultivated	5	LP4	14.9710, 107.8950	ChungTam	Kon Tum	Tu Mơ Rông	Măng Ri	Chung Tam	Root	23.8	1.51
+13	Cultivated	5	LP4	15.0318, 107.9791	TraLinh_drug_materials_farm	Quảng Nam	Nam Trà My	Trà Linh	Trà Linh drug materials farm	Root	50.3	1.68
+139	Cultivated	4	LP6	15.0073, 108.0076	TắkRâng	Quảng Nam	Nam Trà My	Trà Cang	Tắk Râng	Leave	61.4	1.54
+14	Cultivated	5	LP4	15.0318, 107.9791	TraLinh_drug_materials_farm	Quảng Nam	Nam Trà My	Trà Linh	Trà Linh drug materials farm	Leave	46.8	1.39
+140	Cultivated	4	LP6	15.0073, 108.0076	TắkRâng	Quảng Nam	Nam Trà My	Trà Cang	Tắk Râng	Leave	35.5	1.81
+141	Cultivated	4	LP6	15.0073, 108.0076	TắkRâng	Quảng Nam	Nam Trà My	Trà Cang	Tắk Râng	Leave	36.2	1.85
+142	Cultivated	4	LP6	15.0073, 108.0076	TắkRâng	Quảng Nam	Nam Trà My	Trà Cang	Tắk Râng	Leave	55.8	1.71
+143	Cultivated	4	LP6	15.0073, 108.0076	TắkRâng	Quảng Nam	Nam Trà My	Trà Cang	Tắk Râng	Leave	41.3	1.72
+144	Cultivated	4	LP6	15.0073, 108.0076	TắkRâng	Quảng Nam	Nam Trà My	Trà Cang	Tắk Râng	Leave	28.2	1.75
+145	Cultivated	4	LP6	15.0073, 108.0076	TắkRâng	Quảng Nam	Nam Trà My	Trà Cang	Tắk Râng	Leave	41.6	1.6
+146	Cultivated	4	LP6	15.0073, 108.0076	TắkRâng	Quảng Nam	Nam Trà My	Trà Cang	Tắk Râng	Leave	39.2	1.91
+147	Cultivated	4	LP2	15.0073, 108.0076	TắkRâng	Quảng Nam	Nam Trà My	Trà Cang	Tắk Râng	Leave	23.5	1.4
+148	Cultivated	4	LP2	15.0073, 108.0076	TắkRâng	Quảng Nam	Nam Trà My	Trà Cang	Tắk Râng	Leave	44.1	1.54
+149	Cultivated	4	LP2	15.0073, 108.0076	TắkRâng	Quảng Nam	Nam Trà My	Trà Cang	Tắk Râng	Leave	34.4	1.57
+15	Cultivated	5	LP4	15.0318, 107.9791	TraLinh_drug_materials_farm	Quảng Nam	Nam Trà My	Trà Linh	Trà Linh drug materials farm	Root	94.7	1.36
+150	Cultivated	4	LP2	15.0073, 108.0076	TắkRâng	Quảng Nam	Nam Trà My	Trà Cang	Tắk Râng	Leave	35.8	1.63
+152	Cultivated	4	LP2	15.0073, 108.0076	TắkRâng	Quảng Nam	Nam Trà My	Trà Cang	Tắk Râng	Leave	55	1.6
+153	Cultivated	4	LP2	15.0073, 108.0076	TắkRâng	Quảng Nam	Nam Trà My	Trà Cang	Tắk Râng	Leave	81.9	1.62
+155	Cultivated	4	LP3	15.0140, 108.0310	ConPin	Quảng Nam	Nam Trà My	Trà Linh	Con Pin	Leave	109.6	1.94
+157	Cultivated	4	LP3	15.0140, 108.0310	ConPin	Quảng Nam	Nam Trà My	Trà Linh	Con Pin	Leave	89.6	1.62
+158	Cultivated	4	LP3	15.0140, 108.0310	ConPin	Quảng Nam	Nam Trà My	Trà Linh	Con Pin	Leave	56.2	1.72
+159	Cultivated	4	LP3	15.0140, 108.0310	ConPin	Quảng Nam	Nam Trà My	Trà Linh	Con Pin	Leave	100.4	1.89
+16	Cultivated	5	LP4	15.0318, 107.9791	TraLinh_drug_materials_farm	Quảng Nam	Nam Trà My	Trà Linh	Trà Linh drug materials farm	Leave	15.8	1.65
+160	Cultivated	4	LP3	15.0140, 108.0310	ConPin	Quảng Nam	Nam Trà My	Trà Linh	Con Pin	Leave	113.4	1.83
+161	Cultivated	4	LP3	15.0140, 108.0310	ConPin	Quảng Nam	Nam Trà My	Trà Linh	Con Pin	Root	113.6	1.9
+162	Cultivated	4	LP3	15.0140, 108.0310	ConPin	Quảng Nam	Nam Trà My	Trà Linh	Con Pin	Leave	88.2	1.74
+163	Cultivated	4	LP3	15.0320, 107.9790	MăngLùng	Quảng Nam	Nam Trà My	Trà Linh	Măng Lùng	Leave	70.1	2.06
+164	Cultivated	4	LP3	15.0320, 107.9790	MăngLùng	Quảng Nam	Nam Trà My	Trà Linh	Măng Lùng	Leave	98.9	1.92
+165	Cultivated	4	LP3	15.0320, 107.9790	MăngLùng	Quảng Nam	Nam Trà My	Trà Linh	Măng Lùng	Leave	83.5	1.99
+166	Cultivated	4	LP3	15.0320, 107.9790	MăngLùng	Quảng Nam	Nam Trà My	Trà Linh	Măng Lùng	Leave	66.1	1.97
+167	Cultivated	4	LP3	15.0320, 107.9790	MăngLùng	Quảng Nam	Nam Trà My	Trà Linh	Măng Lùng	Leave	64.4	1.9
+168	Cultivated	4	LP3	15.0320, 107.9790	MăngLùng	Quảng Nam	Nam Trà My	Trà Linh	Măng Lùng	Leave	59.4	2.19
+169	Cultivated	4	LP3	15.0320, 107.9790	MăngLùng	Quảng Nam	Nam Trà My	Trà Linh	Măng Lùng	Leave	61.6	2.02
+170	Cultivated	4	LP3	15.0320, 107.9790	MăngLùng	Quảng Nam	Nam Trà My	Trà Linh	Măng Lùng	Leave	61.4	2.12
+171	Cultivated	4	LP3	15.0321, 107.9843	MăngLùng	Quảng Nam	Nam Trà My	Trà Linh	Măng Lùng	Leave	25.4	1.88
+172	Cultivated	4	LP3	15.0321, 107.9843	MăngLùng	Quảng Nam	Nam Trà My	Trà Linh	Măng Lùng	Leave	36.4	1.89
+173	Cultivated	4	LP3	15.0321, 107.9843	MăngLùng	Quảng Nam	Nam Trà My	Trà Linh	Măng Lùng	Leave	59.9	1.76
+174	Cultivated	4	LP3	15.0321, 107.9843	MăngLùng	Quảng Nam	Nam Trà My	Trà Linh	Măng Lùng	Leave	22.1	2.01
+175	Cultivated	4	LP3	15.0321, 107.9843	MăngLùng	Quảng Nam	Nam Trà My	Trà Linh	Măng Lùng	Leave	53.8	1.94
+176	Cultivated	4	LP3	15.0321, 107.9843	MăngLùng	Quảng Nam	Nam Trà My	Trà Linh	Măng Lùng	Leave	60.1	1.91
+177	Cultivated	4	LP3	15.0321, 107.9843	MăngLùng	Quảng Nam	Nam Trà My	Trà Linh	Măng Lùng	Leave	50.1	1.89
+178	Cultivated	4	LP3	15.0321, 107.9843	MăngLùng	Quảng Nam	Nam Trà My	Trà Linh	Măng Lùng	Leave	55.7	1.98
+179	Cultivated	4	LP2	14.9641 108.1005	TắkTúi	Quảng Nam	Nam Trà My	Trà Nam	Tắk Túi	Leave	57.1	1.65
+18	Cultivated	5	LP5	14.9610, 107.9540	ĐắkViên	Kon Tum	Tu Mơ Rông	Tê Xăng	Đắk Viên	Leave	48.4	2.18
+180	Cultivated	4	LP2	14.9641 108.1005	TắkTúi	Quảng Nam	Nam Trà My	Trà Nam	Tắk Túi	Leave	67.2	1.91
+181	Cultivated	4	LP2	14.9641 108.1005	TắkTúi	Quảng Nam	Nam Trà My	Trà Nam	Tắk Túi	Leave	41.7	1.87
+182	Cultivated	4	LP2	14.9641 108.1005	TắkTúi	Quảng Nam	Nam Trà My	Trà Nam	Tắk Túi	Leave	67.4	2.14
+183	Cultivated	4	LP2	14.9641 108.1005	TắkTúi	Quảng Nam	Nam Trà My	Trà Nam	Tắk Túi	Leave	93.8	1.78
+184	Cultivated	4	LP2	14.9641 108.1005	TắkTúi	Quảng Nam	Nam Trà My	Trà Nam	Tắk Túi	Leave	65.9	1.75
+185	Cultivated	4	LP2	14.9641 108.1005	TắkTúi	Quảng Nam	Nam Trà My	Trà Nam	Tắk Túi	Leave	51.3	1.72
+186	Cultivated	4	LP2	14.9641 108.1005	TắkTúi	Quảng Nam	Nam Trà My	Trà Nam	Tắk Túi	Leave	49.2	1.66
+187	Cultivated	4	LP3	15.0094, 108.0308	TắkNgo	Quảng Nam	Nam Trà My	Trà Linh	Tắk Ngo	Leave	108.9	1.79
+188	Cultivated	4	LP3	15.0094, 108.0308	TắkNgo	Quảng Nam	Nam Trà My	Trà Linh	Tắk Ngo	Leave	23.1	1.72
+189	Cultivated	4	LP3	15.0094, 108.0308	TắkNgo	Quảng Nam	Nam Trà My	Trà Linh	Tắk Ngo	Leave	61	1.53
+19	Cultivated	5	LP5	14.9610, 107.9540	ĐắkViên	Kon Tum	Tu Mơ Rông	Tê Xăng	Đắk Viên	Leave	17.5	1.78
+190	Cultivated	4	LP3	15.0094, 108.0308	TắkNgo	Quảng Nam	Nam Trà My	Trà Linh	Tắk Ngo	Leave	28.7	2.05
+191	Cultivated	4	LP3	15.0094, 108.0308	TắkNgo	Quảng Nam	Nam Trà My	Trà Linh	Tắk Ngo	Leave	78.2	1.71
+192	Cultivated	4	LP3	15.0094, 108.0308	TắkNgo	Quảng Nam	Nam Trà My	Trà Linh	Tắk Ngo	Leave	43.9	1.87
+193	Cultivated	4	LP3	15.0094, 108.0308	TắkNgo	Quảng Nam	Nam Trà My	Trà Linh	Tắk Ngo	Leave	24.9	1.68
+194	Cultivated	4	LP3	15.0094, 108.0308	TắkNgo	Quảng Nam	Nam Trà My	Trà Linh	Tắk Ngo	Leave	35.6	1.83
+195	Cultivated	4	LP3	15.0140, 108.0310	ConPin	Quảng Nam	Nam Trà My	Trà Linh	Con Pin	Leave	96.2	1.99
+196	Cultivated	4	LP3	15.0140, 108.0310	ConPin	Quảng Nam	Nam Trà My	Trà Linh	Con Pin	Leave	91.7	1.77
+197	Cultivated	4	LP3	15.0140, 108.0310	ConPin	Quảng Nam	Nam Trà My	Trà Linh	Con Pin	Leave	84.4	2.07
+198	Cultivated	4	LP3	15.0140, 108.0310	ConPin	Quảng Nam	Nam Trà My	Trà Linh	Con Pin	Leave	94.7	1.69
+199	Cultivated	4	LP3	15.0140, 108.0310	ConPin	Quảng Nam	Nam Trà My	Trà Linh	Con Pin	Leave	68.1	1.66
+20	Cultivated	5	LP5	14.9710, 107.8950	ChungTam	Kon Tum	Tu Mơ Rông	Măng Ri	Chung Tam	Root	19.9	1.42
+200	Cultivated	4	LP3	15.0140, 108.0310	ConPin	Quảng Nam	Nam Trà My	Trà Linh	Con Pin	Leave	66.6	1.65
+201	Cultivated	4	LP3	15.0140, 108.0310	ConPin	Quảng Nam	Nam Trà My	Trà Linh	Con Pin	Leave	83.7	1.73
+202	Cultivated	4	LP3	15.0140, 108.0310	ConPin	Quảng Nam	Nam Trà My	Trà Linh	Con Pin	Leave	54.5	1.78
+203	Cultivated	4	LP2	15.0073, 108.0076	TắkRâng	Quảng Nam	Nam Trà My	Trà Cang	Tắk Râng	Leave	23.3	2.01
+204	Cultivated	4	LP2	15.0073, 108.0076	TắkRâng	Quảng Nam	Nam Trà My	Trà Cang	Tắk Râng	Leave	26.3	1.77
+205	Cultivated	4	LP2	15.0073, 108.0076	TắkRâng	Quảng Nam	Nam Trà My	Trà Cang	Tắk Râng	Leave	24.4	2.02
+206	Cultivated	4	LP2	15.0073, 108.0076	TắkRâng	Quảng Nam	Nam Trà My	Trà Cang	Tắk Râng	Leave	34.6	1.81
+207	Cultivated	4	LP2	15.0073, 108.0076	TắkRâng	Quảng Nam	Nam Trà My	Trà Cang	Tắk Râng	Leave	21.6	1.64
+208	Cultivated	4	LP2	15.0073, 108.0076	TắkRâng	Quảng Nam	Nam Trà My	Trà Cang	Tắk Râng	Leave	26.5	1.84
+209	Cultivated	4	LP2	15.0073, 108.0076	TắkRâng	Quảng Nam	Nam Trà My	Trà Cang	Tắk Râng	Leave	33.5	1.93
+210	Cultivated	4	LP2	15.0073, 108.0076	TắkRâng	Quảng Nam	Nam Trà My	Trà Cang	Tắk Râng	Leave	35.4	1.81
+211	Wild	4	LP1	15.2750, 107.8790	PhướcLộc	Quảng Nam	Phước Sơn	Phước Lộc		Leave	27.7	1.82
+212	Wild	4	LP1	15.2750, 107.8790	PhướcLộc	Quảng Nam	Phước Sơn	Phước Lộc		Leave	28.4	1.97
+213	Wild	4	LP1	15.2750, 107.8790	PhướcLộc	Quảng Nam	Phước Sơn	Phước Lộc		Leave	39.1	1.96
+214	Wild	4	LP1	15.2750, 107.8790	PhướcLộc	Quảng Nam	Phước Sơn	Phước Lộc		Leave	34.1	1.78
+215	Wild	4	LP1	15.2750, 107.8790	PhướcLộc	Quảng Nam	Phước Sơn	Phước Lộc		Leave	24.5	1.88
+216	Wild	4	LP1	15.2750, 107.8790	PhướcLộc	Quảng Nam	Phước Sơn	Phước Lộc		Leave	27.4	2.02
+217	Cultivated	4	LP1	15.0320, 107.9790	MăngLùng	Quảng Nam	Nam Trà My	Trà Linh	Măng Lùng	Leave	61.6	1.78
+218	Wild	4	LP1	15.2750, 107.8790	PhướcLộc	Quảng Nam	Phước Sơn	Phước Lộc		Leave	36.6	1.57
+219	Cultivated	4	LP3	15.0320, 107.9790	MăngLùng	Quảng Nam	Nam Trà My	Trà Linh	Măng Lùng	Leave	28.7	2.2
+22	Cultivated	5	LP5	14.9610, 107.9540	ĐắkViên	Kon Tum	Tu Mơ Rông	Tê Xăng	Đắk Viên	Leave	16.5	1.78
+220	Cultivated	4	LP3	15.0320, 107.9790	MăngLùng	Quảng Nam	Nam Trà My	Trà Linh	Măng Lùng	Leave	47.2	1.53
+221	Cultivated	4	LP3	15.0320, 107.9790	MăngLùng	Quảng Nam	Nam Trà My	Trà Linh	Măng Lùng	Leave	44.4	2.06
+222	Cultivated	4	LP3	15.0320, 107.9790	MăngLùng	Quảng Nam	Nam Trà My	Trà Linh	Măng Lùng	Leave	79.5	2.02
+223	Cultivated	4	LP3	15.0320, 107.9790	MăngLùng	Quảng Nam	Nam Trà My	Trà Linh	Măng Lùng	Leave	59	1.8
+224	Cultivated	4	LP3	15.0320, 107.9790	MăngLùng	Quảng Nam	Nam Trà My	Trà Linh	Măng Lùng	Leave	25.3	2.15
+225	Cultivated	4	LP3	15.0320, 107.9790	MăngLùng	Quảng Nam	Nam Trà My	Trà Linh	Măng Lùng	Leave	24.4	1.69
+226	Cultivated	4	LP3	15.0320, 107.9790	MăngLùng	Quảng Nam	Nam Trà My	Trà Linh	Măng Lùng	Leave	27.8	2.1
+227	Cultivated	4	LP2	14.9641 108.1005	TắkTúi	Quảng Nam	Nam Trà My	Trà Nam	Tắk Túi	Leave	53.2	1.56
+228	Cultivated	4	LP2	14.9641 108.1005	TắkTúi	Quảng Nam	Nam Trà My	Trà Nam	Tắk Túi	Leave	61.4	1.82
+229	Cultivated	4	LP2	14.9641 108.1005	TắkTúi	Quảng Nam	Nam Trà My	Trà Nam	Tắk Túi	Leave	78.5	1.82
+23	Cultivated	5	LP5	14.9610, 107.9540	ĐắkViên	Kon Tum	Tu Mơ Rông	Tê Xăng	Đắk Viên	Leave	10.8	1.6
+230	Cultivated	4	LP2	14.9641 108.1005	TắkTúi	Quảng Nam	Nam Trà My	Trà Nam	Tắk Túi	Leave	62.2	1.85
+232	Cultivated	4	LP2	14.9641 108.1005	TắkTúi	Quảng Nam	Nam Trà My	Trà Nam	Tắk Túi	Leave	44.5	1.69
+233	Cultivated	4	LP2	14.9641 108.1005	TắkTúi	Quảng Nam	Nam Trà My	Trà Nam	Tắk Túi	Leave	47.9	1.54
+235	Cultivated	4	LP1	15.7920, 107.2590	Ch'Ơm	Quảng Nam	Tây Giang	Ch' Ơm		Leave	35.2	1.73
+236	Cultivated	4	LP1	15.7920, 107.2590	Ch'Ơm	Quảng Nam	Tây Giang	Ch' Ơm		Leave	64.7	1.94
+238	Cultivated	4	LP1	15.1036, 108.0615	TràCang_H3	Quảng Nam	Nam Trà My	Trà Cang	Hamlet 2	Leave	25.3	1.98
+24	Cultivated	5	LP5	14.9610, 107.9540	ĐắkViên	Kon Tum	Tu Mơ Rông	Tê Xăng	Đắk Viên	Leave	22.2	1.89
+241	Wild	4	LP1	15.2750, 107.8790	PhướcLộc	Quảng Nam	Phước Sơn	Phước Lộc		Leave	49.3	1.45
+242	Cultivated	4	LP1	15.0320, 107.9790	MăngLùng	Quảng Nam	Nam Trà My	Trà Linh	Măng Lùng	Leave	20.1	1.71
+243	Cultivated	4	LP3	15.0140, 108.0310	ConPin	Quảng Nam	Nam Trà My	Trà Linh	Con Pin	Leave	60.1	1.83
+244	Cultivated	4	LP3	15.0321, 107.9843	MăngLùng	Quảng Nam	Nam Trà My	Trà Linh	Măng Lùng	Leave	51.2	2.16
+245	Cultivated	4	LP3	15.0321, 107.9843	MăngLùng	Quảng Nam	Nam Trà My	Trà Linh	Măng Lùng	Leave	24.7	2.01
+246	Cultivated	4	LP3	15.0321, 107.9843	MăngLùng	Quảng Nam	Nam Trà My	Trà Linh	Măng Lùng	Leave	43.7	1.67
+247	Cultivated	4	LP3	15.0140, 108.0310	ConPin	Quảng Nam	Nam Trà My	Trà Linh	Con Pin	Leave	80.5	1.75
+248	Cultivated	4	LP3	15.0321, 107.9843	MăngLùng	Quảng Nam	Nam Trà My	Trà Linh	Măng Lùng	Leave	17.7	1.88
+249	Cultivated	4	LP3	15.0140, 108.0310	ConPin	Quảng Nam	Nam Trà My	Trà Linh	Con Pin	Leave	109.1	1.92
+250	Cultivated	4	LP3	15.0321, 107.9843	MăngLùng	Quảng Nam	Nam Trà My	Trà Linh	Măng Lùng	Leave	20.6	1.93
+251	Cultivated	4	LP3	15.0094, 108.0308	TắkNgo	Quảng Nam	Nam Trà My	Trà Linh	Tắk Ngo	Leave	8	2.06
+252	Cultivated	4	LP3	15.0094, 108.0308	TắkNgo	Quảng Nam	Nam Trà My	Trà Linh	Tắk Ngo	Leave	14.5	1.76
+253	Cultivated	4	LP3	15.0094, 108.0308	TắkNgo	Quảng Nam	Nam Trà My	Trà Linh	Tắk Ngo	Leave	57.1	1.8
+254	Cultivated	4	LP3	15.0094, 108.0308	TắkNgo	Quảng Nam	Nam Trà My	Trà Linh	Tắk Ngo	Leave	15.9	2
+255	Cultivated	4	LP3	15.0094, 108.0308	TắkNgo	Quảng Nam	Nam Trà My	Trà Linh	Tắk Ngo	Leave	16.1	1.83
+256	Cultivated	4	LP3	15.0094, 108.0308	TắkNgo	Quảng Nam	Nam Trà My	Trà Linh	Tắk Ngo	Leave	21.6	1.85
+257	Cultivated	4	LP3	15.0094, 108.0308	TắkNgo	Quảng Nam	Nam Trà My	Trà Linh	Tắk Ngo	Leave	14.6	2.11
+258	Cultivated	4	LP3	15.0094, 108.0308	TắkNgo	Quảng Nam	Nam Trà My	Trà Linh	Tắk Ngo	Leave	22	1.96
+259	Cultivated	4	LP2	14.9641 108.1005	TắkTúi	Quảng Nam	Nam Trà My	Trà Nam	Tắk Túi	Leave	45.8	1.58
+260	Cultivated	4	LP2	14.9641 108.1005	TắkTúi	Quảng Nam	Nam Trà My	Trà Nam	Tắk Túi	Leave	54.2	1.98
+261	Cultivated	4	LP2	14.9641 108.1005	TắkTúi	Quảng Nam	Nam Trà My	Trà Nam	Tắk Túi	Leave	66.4	1.67
+262	Cultivated	4	LP2	14.9641 108.1005	TắkTúi	Quảng Nam	Nam Trà My	Trà Nam	Tắk Túi	Leave	44.2	1.64
+264	Cultivated	4	LP2	14.9641 108.1005	TắkTúi	Quảng Nam	Nam Trà My	Trà Nam	Tắk Túi	Leave	84.5	1.84
+265	Cultivated	4	LP2	14.9641 108.1005	TắkTúi	Quảng Nam	Nam Trà My	Trà Nam	Tắk Túi	Leave	69.4	1.78
+266	Cultivated	4	LP2	14.9641 108.1005	TắkTúi	Quảng Nam	Nam Trà My	Trà Nam	Tắk Túi	Leave	103.2	1.94
+267	Cultivated	4	LP3	15.0094, 108.0308	TắkNgo	Quảng Nam	Nam Trà My	Trà Linh	Tắk Ngo	Leave	49.9	1.79
+268	Cultivated	4	LP3	15.0094, 108.0308	TắkNgo	Quảng Nam	Nam Trà My	Trà Linh	Tắk Ngo	Leave	10.1	2.21
+269	Cultivated	4	LP3	15.0094, 108.0308	TắkNgo	Quảng Nam	Nam Trà My	Trà Linh	Tắk Ngo	Leave	23.4	1.86
+270	Cultivated	4	LP3	15.0140, 108.0310	ConPin	Quảng Nam	Nam Trà My	Trà Linh	Con Pin	Root	56.2	2.32
+271	Cultivated	4	LP3	15.0094, 108.0308	TắkNgo	Quảng Nam	Nam Trà My	Trà Linh	Tắk Ngo	Leave	9.8	1.67
+272	Cultivated	4	LP3	15.0094, 108.0308	TắkNgo	Quảng Nam	Nam Trà My	Trà Linh	Tắk Ngo	Leave	40.2	1.88
+273	Cultivated	4	LP3	15.0094, 108.0308	TắkNgo	Quảng Nam	Nam Trà My	Trà Linh	Tắk Ngo	Leave	23.9	1.78
+274	Cultivated	4	LP3	15.0094, 108.0308	TắkNgo	Quảng Nam	Nam Trà My	Trà Linh	Tắk Ngo	Leave	29	2.04
+275	Cultivated	4	LP2	15.0073, 108.0076	TắkRâng	Quảng Nam	Nam Trà My	Trà Cang	Tắk Râng	Leave	34.6	1.52
+278	Cultivated	4	LP2	14.9641 108.1005	TắkTúi	Quảng Nam	Nam Trà My	Trà Nam	Tắk Túi	Leave	65	2.04
+280	Cultivated	4	LP2	15.0854, 108.0485	TràCang_H3	Quảng Nam	Nam Trà My	Trà Cang	Hamlet 3	Leave	80.7	1.86
+283	Cultivated	4	LP2	15.0070, 108.0860	TràNam	Quảng Nam	Nam Trà My	Trà Nam		Leave	53.6	1.43
+284	Wild	4	LP2	15.2750, 107.8790	PhướcLộc	Quảng Nam	Phước Sơn	Phước Lộc		Leave	26.3	1.62
+285	Wild	4	LP2	15.2750, 107.8790	PhướcLộc	Quảng Nam	Phước Sơn	Phước Lộc		Root	20.6	1.44
+286	Wild	4	LP2	15.2750, 107.8790	PhướcLộc	Quảng Nam	Phước Sơn	Phước Lộc		Leave	25.6	1.78
+287	Cultivated	4	LP2	15.0070, 108.0860	TràNam	Quảng Nam	Nam Trà My	Trà Nam		Leave	50.1	1.37
+289	Cultivated	4	LP2	14.9641 108.1005	TắkTúi	Quảng Nam	Nam Trà My	Trà Nam	Tắk Túi	Leave	47.2	1.59
+290	Wild	4	LP2	15.2750, 107.8790	PhướcLộc	Quảng Nam	Phước Sơn	Phước Lộc		Root	22.7	2.28
+291	Cultivated	4	LP3	15.0321, 107.9843	MăngLùng	Quảng Nam	Nam Trà My	Trà Linh	Măng Lùng	Leave	13.6	1.8
+292	Cultivated	4	LP3	15.0321, 107.9843	MăngLùng	Quảng Nam	Nam Trà My	Trà Linh	Măng Lùng	Leave	34.7	1.55
+293	Cultivated	4	LP3	15.0321, 107.9843	MăngLùng	Quảng Nam	Nam Trà My	Trà Linh	Măng Lùng	Leave	52.9	1.64
+294	Cultivated	4	LP3	15.0321, 107.9843	MăngLùng	Quảng Nam	Nam Trà My	Trà Linh	Măng Lùng	Leave	40	1.71
+295	Cultivated	4	LP3	15.0321, 107.9843	MăngLùng	Quảng Nam	Nam Trà My	Trà Linh	Măng Lùng	Leave	60.4	1.73
+296	Cultivated	4	LP3	15.0321, 107.9843	MăngLùng	Quảng Nam	Nam Trà My	Trà Linh	Măng Lùng	Leave	53.5	1.6
+297	Cultivated	4	LP3	15.0321, 107.9843	MăngLùng	Quảng Nam	Nam Trà My	Trà Linh	Măng Lùng	Leave	48.3	1.98
+298	Cultivated	4	LP3	15.0321, 107.9843	MăngLùng	Quảng Nam	Nam Trà My	Trà Linh	Măng Lùng	Leave	63.8	1.68
+299	Cultivated	4	LP1	14.9641 108.1005	TắkTúi	Quảng Nam	Nam Trà My	Trà Nam	Tắk Túi	Leave	39.1	2.12
+300	Cultivated	4	LP1	14.9641 108.1005	TắkTúi	Quảng Nam	Nam Trà My	Trà Nam	Tắk Túi	Leave	51.3	1.88
+301	Cultivated	4	LP1	15.0070, 108.0860	TràNam	Quảng Nam	Nam Trà My	Trà Nam		Leave	37.1	1.39
+302	Cultivated	4	LP1	15.7920, 107.2590	Ch'Ơm	Quảng Nam	Tây Giang	Ch' Ơm		Root	91.2	1.78
+303	Cultivated	4	LP1	14.9641 108.1005	TắkTúi	Quảng Nam	Nam Trà My	Trà Nam	Tắk Túi	Leave	88.7	1.68
+304	Wild	4	LP1	15.2750, 107.8790	PhướcLộc	Quảng Nam	Phước Sơn	Phước Lộc		Root	47.1	1.61
+305	Cultivated	4	LP1	15.0854, 108.0485	TràCang_H3	Quảng Nam	Nam Trà My	Trà Cang	Hamlet 3	Leave	16.4	1.99
+307	Cultivated	4	LP3	15.0321, 107.9843	MăngLùng	Quảng Nam	Nam Trà My	Trà Linh	Măng Lùng	Leave	12.4	1.98
+308	Cultivated	4	LP3	15.0321, 107.9843	MăngLùng	Quảng Nam	Nam Trà My	Trà Linh	Măng Lùng	Leave	63.9	1.93
+309	Cultivated	4	LP3	15.0321, 107.9843	MăngLùng	Quảng Nam	Nam Trà My	Trà Linh	Măng Lùng	Leave	55.5	1.93
+310	Cultivated	4	LP3	15.0321, 107.9843	MăngLùng	Quảng Nam	Nam Trà My	Trà Linh	Măng Lùng	Leave	48.6	1.96
+311	Cultivated	4	LP3	15.0321, 107.9843	MăngLùng	Quảng Nam	Nam Trà My	Trà Linh	Măng Lùng	Leave	44.9	1.9
+312	Cultivated	4	LP3	15.0321, 107.9843	MăngLùng	Quảng Nam	Nam Trà My	Trà Linh	Măng Lùng	Leave	27.5	1.99
+313	Cultivated	4	LP3	15.0321, 107.9843	MăngLùng	Quảng Nam	Nam Trà My	Trà Linh	Măng Lùng	Leave	56.7	1.99
+314	Cultivated	4	LP3	15.0321, 107.9843	MăngLùng	Quảng Nam	Nam Trà My	Trà Linh	Măng Lùng	Leave	47.9	2.17
+315	Cultivated	4	LP6	15.0320, 107.9790	MăngLùng	Quảng Nam	Nam Trà My	Trà Linh	Măng Lùng	Leave	50.1	2.15
+316	Cultivated	4	LP6	15.0320, 107.9790	MăngLùng	Quảng Nam	Nam Trà My	Trà Linh	Măng Lùng	Leave	67.7	1.88
+317	Cultivated	4	LP6	15.0320, 107.9790	MăngLùng	Quảng Nam	Nam Trà My	Trà Linh	Măng Lùng	Leave	67.6	2.03
+318	Cultivated	4	LP6	15.0073, 108.0076	TắkRâng	Quảng Nam	Nam Trà My	Trà Cang	Tắk Râng	Leave	49.7	1.7
+319	Cultivated	4	LP6	15.0320, 107.9790	MăngLùng	Quảng Nam	Nam Trà My	Trà Linh	Măng Lùng	Leave	124.5	1.89
+320	Cultivated	4	LP6	15.0073, 108.0076	TắkRâng	Quảng Nam	Nam Trà My	Trà Cang	Tắk Râng	Leave	57	1.7
+321	Cultivated	4	LP6	15.0320, 107.9790	MăngLùng	Quảng Nam	Nam Trà My	Trà Linh	Măng Lùng	Leave	52.8	1.95
+322	Cultivated	4	LP6	15.0073, 108.0076	TắkRâng	Quảng Nam	Nam Trà My	Trà Cang	Tắk Râng	Leave	31.8	1.5
+323	Cultivated	4	LP3	15.0320, 107.9790	MăngLùng	Quảng Nam	Nam Trà My	Trà Linh	Măng Lùng	Leave	97.8	1.8
+324	Cultivated	4	LP3	15.0320, 107.9790	MăngLùng	Quảng Nam	Nam Trà My	Trà Linh	Măng Lùng	Leave	72.3	2
+325	Cultivated	4	LP3	15.0320, 107.9790	MăngLùng	Quảng Nam	Nam Trà My	Trà Linh	Măng Lùng	Leave	126.4	1.82
+326	Cultivated	4	LP3	15.0320, 107.9790	MăngLùng	Quảng Nam	Nam Trà My	Trà Linh	Măng Lùng	Leave	70.2	1.85
+327	Cultivated	4	LP3	15.0320, 107.9790	MăngLùng	Quảng Nam	Nam Trà My	Trà Linh	Măng Lùng	Leave	46.3	1.88
+328	Cultivated	4	LP3	15.0320, 107.9790	MăngLùng	Quảng Nam	Nam Trà My	Trà Linh	Măng Lùng	Leave	69.5	2.04
+329	Cultivated	4	LP3	15.0320, 107.9790	MăngLùng	Quảng Nam	Nam Trà My	Trà Linh	Măng Lùng	Leave	60.1	1.86
+33	Cultivated	5	LP4	15.0318, 107.9791	TraLinh_drug_materials_farm	Quảng Nam	Nam Trà My	Trà Linh	Trà Linh drug materials farm	Leave	26	2.26
+330	Cultivated	4	LP3	15.0320, 107.9790	MăngLùng	Quảng Nam	Nam Trà My	Trà Linh	Măng Lùng	Leave	65.7	2.05
+34	Cultivated	5	LP4	15.0318, 107.9791	TraLinh_drug_materials_farm	Quảng Nam	Nam Trà My	Trà Linh	Trà Linh drug materials farm	Leave	8.1	1.95
+35	Cultivated	5	LP4	15.0318, 107.9791	TraLinh_drug_materials_farm	Quảng Nam	Nam Trà My	Trà Linh	Trà Linh drug materials farm	Leave	31.1	2.08
+36	Cultivated	5	LP4	15.0117, 108.0076	TắkLan	Quảng Nam	Nam Trà My	Trà Linh	Tắk Lan	Leave	32.7	2.03
+37	Cultivated	5	LP4	15.0318, 107.9791	TraLinh_drug_materials_farm	Quảng Nam	Nam Trà My	Trà Linh	Trà Linh drug materials farm	Leave	23.2	2.06
+38	Cultivated	5	LP4	15.0318, 107.9791	TraLinh_drug_materials_farm	Quảng Nam	Nam Trà My	Trà Linh	Trà Linh drug materials farm	Leave	8.2	1.95
+4	Cultivated	5	LP4	15.0352, 107.9887	TràLinh_H3	Quảng Nam	Nam Trà My	Trà Linh	Hamlet 3	Root	44.6	2.39
+40	Cultivated	5	LP4	15.0318, 107.9791	TraLinh_drug_materials_farm	Quảng Nam	Nam Trà My	Trà Linh	Trà Linh drug materials farm	Leave	42.3	1.35
+41	Cultivated	5	LP4	15.0352, 107.9887	TràLinh_H3	Quảng Nam	Nam Trà My	Trà Linh	Hamlet 3	Root	88.6	1.98
+42	Cultivated	5	LP4	15.0352, 107.9887	TràLinh_H3	Quảng Nam	Nam Trà My	Trà Linh	Hamlet 3	Root	65	1.86
+43	Cultivated	5	LP4	15.0352, 107.9887	TràLinh_H3	Quảng Nam	Nam Trà My	Trà Linh	Hamlet 3	Root	61.2	2.18
+44	Cultivated	5	LP4	15.0352, 107.9887	TràLinh_H3	Quảng Nam	Nam Trà My	Trà Linh	Hamlet 3	Root	38	1.76
+45	Cultivated	5	LP4	15.0352, 107.9887	TràLinh_H3	Quảng Nam	Nam Trà My	Trà Linh	Hamlet 3	Root	90.3	1.74
+47	Cultivated	5	LP4	15.0352, 107.9887	TràLinh_H3	Quảng Nam	Nam Trà My	Trà Linh	Hamlet 3	Root	81.3	1.97
+48	Cultivated	5	LP4	15.0352, 107.9887	TràLinh_H3	Quảng Nam	Nam Trà My	Trà Linh	Hamlet 3	Root	53.3	2.1
+49	Cultivated	5	LP4	15.0117, 108.0076	TắkLan	Quảng Nam	Nam Trà My	Trà Linh	Tắk Lan	Leave	67.5	1.75
+50	Cultivated	5	LP4	15.0117, 108.0076	TắkLan	Quảng Nam	Nam Trà My	Trà Linh	Tắk Lan	Leave	55.5	1.73
+51	Cultivated	5	LP4	15.0117, 108.0076	TắkLan	Quảng Nam	Nam Trà My	Trà Linh	Tắk Lan	Leave	64	1.64
+52	Cultivated	5	LP4	15.0117, 108.0076	TắkLan	Quảng Nam	Nam Trà My	Trà Linh	Tắk Lan	Leave	62.8	1.78
+53	Cultivated	5	LP4	15.0117, 108.0076	TắkLan	Quảng Nam	Nam Trà My	Trà Linh	Tắk Lan	Leave	75.6	1.78
+54	Cultivated	5	LP4	15.0117, 108.0076	TắkLan	Quảng Nam	Nam Trà My	Trà Linh	Tắk Lan	Leave	96.6	1.87
+55	Cultivated	5	LP4	15.0117, 108.0076	TắkLan	Quảng Nam	Nam Trà My	Trà Linh	Tắk Lan	Leave	55.6	1.78
+56	Cultivated	5	LP4	15.0117, 108.0076	TắkLan	Quảng Nam	Nam Trà My	Trà Linh	Tắk Lan	Leave	92.5	1.84
+57	Cultivated	5	LP5	14.9708, 107.9990	MăngRương	Kon Tum	Tu Mơ Rông	Ngọk Lây	Măng Rương	Leave	27	1.96
+58	Wild	5	LP5	14.9850, 108.0302	LộcBông	Kon Tum	Tu Mơ Rông	Ngọk Lây	Lộc Bông	Root	21.2	1.81
+59	Wild	5	LP5	14.9850, 108.0303	LộcBông	Kon Tum	Tu Mơ Rông	Ngọk Lây	Lộc Bông	Root	48.8	2.9
+6	Cultivated	5	LP4	15.0352, 107.9887	TràLinh_H3	Quảng Nam	Nam Trà My	Trà Linh	Hamlet 3	Root	77.9	1.8
+60	Wild	5	LP5	14.9850, 108.0304	LộcBông	Kon Tum	Tu Mơ Rông	Ngọk Lây	Lộc Bông	Leave	39.7	2.11
+61	Cultivated	5	LP5	14.9708, 107.9990	MăngRương	Kon Tum	Tu Mơ Rông	Ngọk Lây	Măng Rương	Leave	44.1	1.73
+62	Wild	5	LP5	14.9850, 108.0305	LộcBông	Kon Tum	Tu Mơ Rông	Ngọk Lây	Lộc Bông	Root	30.5	1.77
+63	Cultivated	5	LP5	14.9708, 107.9990	MăngRương	Kon Tum	Tu Mơ Rông	Ngọk Lây	Măng Rương	Leave	31.1	1.46
+64	Wild	5	LP5	14.9850, 108.0306	LộcBông	Kon Tum	Tu Mơ Rông	Ngọk Lây	Lộc Bông	Root	44.4	2.26
+65	Cultivated	5	LP4	15.0318, 107.9791	TraLinh_drug_materials_farm	Quảng Nam	Nam Trà My	Trà Linh	Trà Linh drug materials farm	Leave	54.3	1.99
+66	Cultivated	5	LP4	15.0318, 107.9791	TraLinh_drug_materials_farm	Quảng Nam	Nam Trà My	Trà Linh	Trà Linh drug materials farm	Leave	26.8	1.58
+67	Cultivated	5	LP4	15.0318, 107.9791	TraLinh_drug_materials_farm	Quảng Nam	Nam Trà My	Trà Linh	Trà Linh drug materials farm	Leave	69.9	2.22
+68	Cultivated	5	LP4	15.0318, 107.9791	TraLinh_drug_materials_farm	Quảng Nam	Nam Trà My	Trà Linh	Trà Linh drug materials farm	Leave	13.1	2.36
+69	Cultivated	5	LP4	15.0318, 107.9791	TraLinh_drug_materials_farm	Quảng Nam	Nam Trà My	Trà Linh	Trà Linh drug materials farm	Leave	24.7	1.72
+70	Cultivated	5	LP4	15.0318, 107.9791	TraLinh_drug_materials_farm	Quảng Nam	Nam Trà My	Trà Linh	Trà Linh drug materials farm	Leave	71.7	2.04
+71	Cultivated	5	LP4	15.0318, 107.9791	TraLinh_drug_materials_farm	Quảng Nam	Nam Trà My	Trà Linh	Trà Linh drug materials farm	Leave	25.4	1.76
+72	Cultivated	5	LP4	15.0318, 107.9791	TraLinh_drug_materials_farm	Quảng Nam	Nam Trà My	Trà Linh	Trà Linh drug materials farm	Leave	29.9	1.85
+73	Cultivated	5	LP4	15.0117, 108.0076	TắkLan	Quảng Nam	Nam Trà My	Trà Linh	Tắk Lan	Leave	47	2.01
+74	Cultivated	5	LP4	15.0117, 108.0076	TắkLan	Quảng Nam	Nam Trà My	Trà Linh	Tắk Lan	Leave	32.8	2
+75	Cultivated	5	LP4	15.0117, 108.0076	TắkLan	Quảng Nam	Nam Trà My	Trà Linh	Tắk Lan	Leave	45.8	2.09
+76	Cultivated	5	LP4	15.0094, 108.0308	TắkNgo	Quảng Nam	Nam Trà My	Trà Linh	Tắk Ngo	Root	28.3	1.75
+77	Cultivated	5	LP4	15.0117, 108.0076	TắkLan	Quảng Nam	Nam Trà My	Trà Linh	Tắk Lan	Leave	41.1	1.92
+78	Cultivated	5	LP4	15.0094, 108.0308	TắkNgo	Quảng Nam	Nam Trà My	Trà Linh	Tắk Ngo	Root	55.3	2
+79	Cultivated	5	LP4	15.0117, 108.0076	TắkLan	Quảng Nam	Nam Trà My	Trà Linh	Tắk Lan	Leave	78.1	1.7
+8	Cultivated	5	LP4	15.0352, 107.9887	TràLinh_H3	Quảng Nam	Nam Trà My	Trà Linh	Hamlet 3	Root	71.6	2.8
+80	Cultivated	5	LP4	15.0094, 108.0308	TắkNgo	Quảng Nam	Nam Trà My	Trà Linh	Tắk Ngo	Root	63	2.34
+81	Cultivated	5	LP4	15.0117, 108.0076	TắkLan	Quảng Nam	Nam Trà My	Trà Linh	Tắk Lan	Leave	61.1	1.94
+82	Cultivated	5	LP4	15.0117, 108.0076	TắkLan	Quảng Nam	Nam Trà My	Trà Linh	Tắk Lan	Leave	55.3	1.65
+83	Cultivated	5	LP4	15.0117, 108.0076	TắkLan	Quảng Nam	Nam Trà My	Trà Linh	Tắk Lan	Leave	65.8	1.7
+84	Cultivated	5	LP4	15.0117, 108.0076	TắkLan	Quảng Nam	Nam Trà My	Trà Linh	Tắk Lan	Leave	86.4	1.52
+85	Cultivated	5	LP4	15.0117, 108.0076	TắkLan	Quảng Nam	Nam Trà My	Trà Linh	Tắk Lan	Leave	65.8	1.89
+86	Cultivated	5	LP4	15.0117, 108.0076	TắkLan	Quảng Nam	Nam Trà My	Trà Linh	Tắk Lan	Leave	56.9	1.94
+87	Cultivated	5	LP4	15.0117, 108.0076	TắkLan	Quảng Nam	Nam Trà My	Trà Linh	Tắk Lan	Leave	39.9	2.08
+88	Cultivated	5	LP4	15.0117, 108.0076	TắkLan	Quảng Nam	Nam Trà My	Trà Linh	Tắk Lan	Leave	98.2	1.48
+89	Cultivated	5	LP4	15.0318, 107.9791	TraLinh_drug_materials_farm	Quảng Nam	Nam Trà My	Trà Linh	Trà Linh drug materials farm	Leave	19.3	2.08
+9	Cultivated	5	LP4	15.0318, 107.9791	TraLinh_drug_materials_farm	Quảng Nam	Nam Trà My	Trà Linh	Trà Linh drug materials farm	Root	34.6	1.6
+90	Cultivated	5	LP4	15.0318, 107.9791	TraLinh_drug_materials_farm	Quảng Nam	Nam Trà My	Trà Linh	Trà Linh drug materials farm	Leave	24.4	1.96
+91	Cultivated	5	LP4	15.0318, 107.9791	TraLinh_drug_materials_farm	Quảng Nam	Nam Trà My	Trà Linh	Trà Linh drug materials farm	Leave	48.5	2.12
+92	Cultivated	5	LP4	15.0318, 107.9791	TraLinh_drug_materials_farm	Quảng Nam	Nam Trà My	Trà Linh	Trà Linh drug materials farm	Leave	36.4	1.82
+93	Cultivated	5	LP4	15.0318, 107.9791	TraLinh_drug_materials_farm	Quảng Nam	Nam Trà My	Trà Linh	Trà Linh drug materials farm	Leave	14.2	1.88
+94	Cultivated	5	LP4	15.0318, 107.9791	TraLinh_drug_materials_farm	Quảng Nam	Nam Trà My	Trà Linh	Trà Linh drug materials farm	Leave	47.2	1.89
+95	Cultivated	5	LP4	15.0318, 107.9791	TraLinh_drug_materials_farm	Quảng Nam	Nam Trà My	Trà Linh	Trà Linh drug materials farm	Leave	13.4	1.68
+96	Cultivated	5	LP4	15.0318, 107.9791	TraLinh_drug_materials_farm	Quảng Nam	Nam Trà My	Trà Linh	Trà Linh drug materials farm	Leave	39.2	1.99
+97	Cultivated	5	LP4	15.0117, 108.0076	TắkLan	Quảng Nam	Nam Trà My	Trà Linh	Tắk Lan	Leave	37.6	1.6
+98	Cultivated	5	LP4	15.0117, 108.0076	TắkLan	Quảng Nam	Nam Trà My	Trà Linh	Tắk Lan	Leave	59.5	2.06
+99	Cultivated	5	LP4	15.0117, 108.0076	TắkLan	Quảng Nam	Nam Trà My	Trà Linh	Tắk Lan	Leave	50	1.71
