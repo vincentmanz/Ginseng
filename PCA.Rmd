@@ -1,0 +1,177 @@
+---
+title: "PCA pipeline"
+description: |
+  Blablabla
+author:
+  - name: Vincent Manzanilla 
+    url: https://github.com/vincentmanz/Ginseng
+    affiliation: postdoc at BAseClear/ Analyst at datalabs
+date: "`r Sys.Date()`"
+output: distill::distill_article
+editor_options: 
+  chunk_output_type: console
+---
+
+
+```{r install package, eval=FALSE, include=FALSE}
+if (!requireNamespace("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+
+BiocManager::install("SeqArray")
+BiocManager::install("GENESIS")
+BiocManager::install("Biobase")
+BiocManager::install("SeqVarTools")
+BiocManager::install("SNPRelate")
+```
+
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(SeqArray)
+library(GENESIS)
+library(Biobase)
+library(SeqVarTools)
+library(SNPRelate)
+library(dplyr)
+library(RColorBrewer)
+library(ggplot2)
+library(GGally)
+library(ggrepel)
+```
+
+
+# 1 Convert VCF to GDS
+
+```{r VCF to GDS, message=FALSE, warning=FALSE}
+seqVCF2GDS("deepvariant.cohort_round2.vcf.gz",
+           "deepvariant.cohort_filtered.gcf")
+showfile.gds(closeall = TRUE)
+gds <- seqOpen("deepvariant.cohort_filtered.gcf")
+gds
+```
+
+# 2 Create a SeqVarData object
+
+Note: the order of the samples in the vcf file and in the annot file is important and it has to be coded as characters
+
+```{r SeqVarData, message=FALSE, warning=FALSE}
+annot <-
+  read.csv(
+    "../sample_w_ID.list",
+    sep = "\t",
+    colClasses = c(
+      "character",
+      "character",
+      "character",
+      "character",
+      "character"
+    )
+  )
+head(annot)
+
+metadata <-
+  data.frame(
+    labelDescription = c("Pop_names", "Regrouping ", "Coordinates", "Wild", "sample.id"),
+    row.names = names(annot)
+  )
+annot <- AnnotatedDataFrame(annot, metadata)
+metadata
+annot
+all.equal(annot$sample.id, seqGetData(gds, "sample.id")) #### It has to be TRUE!
+seqData <- SeqVarData(gds, sampleData = annot)
+```
+
+# 3 Population structure and relatedness - PC-AiR
+
+ The PC-AiR method is used to perform a PCA for the detection of population structure that is robust to possible familial relatives in the sample. Unlike a standard PCA, PC-AiR accounts for relatedness (known or cryptic) in the sample and identifies PCs that accurately capture population structure and not family structure. In order to accomplish this, PC-AiR uses measures of pairwise relatedness (kinship coefficients) and measures of pairwise ancestry divergence to identify an ancestry representative subset of mutually unrelated individuals. A standard PCA is performed on this “unrelated subset” of individuals, and PC values for the excluded “related subset” of indivdiuals are predicted from genetic similarity.
+
+These plots help to visualize population structure in the sample and identify clusters of individuals with similar ancestry.
+
+```{r PC-AiR, message=FALSE, warning=FALSE}
+# subset of SNPs that are in approximate linkage equilibrium with each other
+snpset <-
+  snpgdsLDpruning(
+    gds,
+    method = "corr",
+    autosome.only = FALSE,
+    verbose = TRUE,
+    slide.max.bp = 5,
+    ld.threshold = sqrt(0.05),
+  )
+pruned <- unlist(snpset, use.names = FALSE)
+
+#KING method of moment for the identity-by-descent (IBD) analysis
+king <- snpgdsIBDKING(gds, autosome.only = FALSE)
+kingMat <- king$kinship
+dimnames(kingMat) <- list(king$sample.id, king$sample.id)
+
+
+pcs <-
+  pcair(
+    seqData,
+    kinobj = kingMat,
+    kin.thresh = 0.9,
+    divobj = kingMat,
+    div.thresh = -0.6,
+    snp.include = pruned,
+    autosome.only = FALSE,
+    num.cores = 10
+  )
+summary(pcs)
+# The eigenvalues for the top PCs are also shown, which can assist in determining the number of PCs that reflect structure
+
+```
+
+# 4 plotting!
+
+
+```{r format df, message=FALSE, warning=FALSE}
+
+# Formating the df
+pc.df <- as.data.frame(pcs$vectors)
+names(pc.df) <- paste0("PC", 1:ncol(pcs$vectors))
+pc.df$sample.id <- row.names(pcs$vectors)
+pc.df <- left_join(pc.df, pData(annot), by="sample.id")
+
+# Formating the axes names
+specify_decimal <- function(x, k) trimws(format(round(x, k), nsmall=k))
+Axis_PC1<-paste0("PC1 (",specify_decimal(pcs$values[1],2),"%)")
+Axis_PC2<-paste0("PC2 (",specify_decimal(pcs$values[2],2),"%)")
+
+# Formating the color for the PCA
+  #find the palette at https://medialab.github.io/iwanthue/
+pop.cols <- setNames(c("#00aad7", "#9dcfef", "#0098ff", "#76d2ac", "#d24d70", "#b7000c", "#d4ab9c", "#925036", "#ff7800", "#cdd94c", "#75833a", "#3b4245", "#5a8272", "#64419d", "#ff62ff", "#cd52be", "#90ff39", "#74d255"),
+                     c("DacVien", "LocBong", "MangRuong", "ConPin", "MangLung", "TakLan", "TakNgo", "TakRang", "TakTui", "TraLinh_H3", "TraLinh_drug_materials_farm", "Xop", "ChungTam", "ChOm", "PhuocLoc", "MuongHoong", "TraCang_H3", "TraNam"))
+```
+
+```{r PCAs, message=FALSE, warning=FALSE}
+
+# PCA With domestic vs wild populations
+pdf(file="PCA_wild_vs_domesticated.pdf ",width=20,height=10 )
+ggplot(pc.df, aes(PC1, PC2, color=Wild)) + 
+  geom_point() + 
+  geom_label_repel(aes(label = sample.id), box.padding   = 0.15, point.padding = 0.2, segment.color = 'grey50') + 
+  xlab(Axis_PC1) + ylab(Axis_PC2) + ggtitle("PCA - DV + MD 1203 SNPs - Wild vs Cultivated populations")
+# PCA With domestic vs wild populations - NO LABELS
+ggplot(pc.df, aes(PC1, PC2, color=Wild)) + 
+  geom_point() + 
+  xlab(Axis_PC1) + ylab(Axis_PC2) + ggtitle("PCA - DV + MD 1203 SNPs - Wild vs Cultivated populations")
+dev.off()
+
+# PCA with the population data
+pdf(file="PCA_populations.pdf ",width=20,height=10 ) #open file
+ggplot(pc.df, aes(PC1, PC2, color=Pop_names)) + 
+  geom_point() + 
+  geom_label_repel(aes(label = sample.id), box.padding   = 0.15, point.padding = 0.2, segment.color = 'grey50') + 
+  xlab(Axis_PC1) + ylab(Axis_PC2) + ggtitle("PCA - DV + MD 1203 SNPs - Population") +
+  scale_color_manual(values=pop.cols)
+# PCA with the population data - NO LABELS
+ggplot(pc.df, aes(PC1, PC2,color=Pop_names)) + 
+  geom_point(size=3) + 
+  xlab(Axis_PC1) + ylab(Axis_PC2) + ggtitle("PCA - DV + MD 1203 SNPs - Population") +
+  scale_color_manual(values=pop.cols)
+dev.off() #close files
+
+```
+
