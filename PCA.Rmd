@@ -14,7 +14,7 @@ output:
 editor_options: 
   markdown: 
     wrap: 200
-  chunk_output_type: inline
+  chunk_output_type: console
 ---
 
 ```{css, echo=FALSE}
@@ -91,7 +91,7 @@ annot <-
 
 metadata <-
   data.frame(
-    labelDescription = c("Sample ID", "Cultivating status ", "HiSeq Lane", "Experiment", "Coordinates", "Population name","Province", "District", "Commune", "Locality", "Sample type", "Concentration ng/µL", "A260.A280"),
+    labelDescription = c("Sample ID", "Cultivating status ", "HiSeq Lane", "Experiment", "Coordinates", "Population name","Province", "District", "Commune", "Locality", "Sample type", "Concentration ng/µL", "A260.A280", "% Dups",	"M Seqs",	"gDNA quality"),
     row.names = names(annot)
   )
 annot <- AnnotatedDataFrame(annot, metadata)
@@ -244,10 +244,11 @@ p$variance <- setNames(as.numeric(pcs$values), PCA_name)
 p$loadings <- c(0, 0)
 biplot(p)
 
-biplot( p, lab = p$metadata$Province, #change the metata to plot
+biplot( p, lab = p$metadata$M.Seqs, #change the metata to plot
   hline = 0,
   vline = 0,
-  legendPosition = 'right'
+  legendPosition = 'right',
+  
 )
 ```
 
@@ -281,7 +282,10 @@ pl <- eigencorplot(
     'Province',
     'Sample.type',
     'Conc..ng.µL.',
-    'A260.A280'
+    'A260.A280',
+    'X..Dups',
+    'M.Seqs',
+    'gDNA.quality'
   ),
   col = c('white', 'cornsilk1', 'gold', 'forestgreen', 'darkgreen'),
   cexCorval = 1.2,
