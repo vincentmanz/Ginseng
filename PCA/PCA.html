@@ -1498,22 +1498,13 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </ul>
 </nav>
 </div>
-<div class="layout-chunk" data-layout="l-body">
-<style type="text/css">
-.scroll-100 {
-  max-height: 100px;
-  overflow-y: auto;
-  background-color: inherit;
-}
-</style>
-</div>
 <h1 id="convert-vcf-to-gds">1 Convert VCF to GDS</h1>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span class="fu">seqVCF2GDS</span><span class="op">(</span><span class="st">&quot;deepvariant.cohort_filtered.vcf.gz&quot;</span>, <span class="st">&quot;deepvariant.cohort_filtered.gcf&quot;</span><span class="op">)</span>
 </code></pre>
 </div>
-<pre class="scroll-100"><code>Wed Jun  9 15:25:14 2021
+<pre><code>Wed Jun  9 15:32:50 2021
 Variant Call Format (VCF) Import:
     file(s):
         deepvariant.cohort_filtered.vcf.gz (2.3M)
@@ -1549,7 +1540,7 @@ Digests:
     annotation/format/GQ  [md5: ad9d45e3d34b2e0ed23564a38827a331]
     annotation/format/PL  [md5: d9dbdbcd01d0f1e4af197bce367a038d]
 Done.
-Wed Jun  9 15:25:15 2021
+Wed Jun  9 15:32:51 2021
 Optimize the access efficiency ...
 Clean up the fragments of GDS file:
     open the file &#39;deepvariant.cohort_filtered.gcf&#39; (1.5M)
@@ -1557,14 +1548,14 @@ Clean up the fragments of GDS file:
     save to &#39;deepvariant.cohort_filtered.gcf.tmp&#39;
     rename &#39;deepvariant.cohort_filtered.gcf.tmp&#39; (1.5M, reduced: 1.8K)
     # of fragments: 97
-Wed Jun  9 15:25:15 2021</code></pre>
+Wed Jun  9 15:32:51 2021</code></pre>
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span class="fu">showfile.gds</span><span class="op">(</span>closeall <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>
 <span class="va">gds</span> <span class="op">&lt;-</span> <span class="fu">seqOpen</span><span class="op">(</span><span class="st">&quot;deepvariant.cohort_filtered.gcf&quot;</span><span class="op">)</span>
 <span class="va">gds</span>
 </code></pre>
 </div>
-<pre class="scroll-100"><code>Object of class &quot;SeqVarGDSClass&quot;
+<pre><code>Object of class &quot;SeqVarGDSClass&quot;
 File: /home/vincent/Project/Ginseng/PCA/deepvariant.cohort_filtered.gcf (1.5M)
 +    [  ] *
 |--+ description   [  ] *
@@ -1651,7 +1642,7 @@ File: /home/vincent/Project/Ginseng/PCA/deepvariant.cohort_filtered.gcf (1.5M)
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span class="co"># subset of SNPs that are in approximate linkage equilibrium with each other</span>
 <span class="va">snpset</span> <span class="op">&lt;-</span>
-  <span class="fu"><a href="https://rdrr.io/pkg/SNPRelate/man/snpgdsLDpruning.html">snpgdsLDpruning</a></span><span class="op">(</span>
+  <span class="fu">snpgdsLDpruning</span><span class="op">(</span>
     <span class="va">gds</span>,
     method <span class="op">=</span> <span class="st">&quot;corr&quot;</span>,
     autosome.only <span class="op">=</span> <span class="cn">FALSE</span>,
@@ -1661,7 +1652,7 @@ File: /home/vincent/Project/Ginseng/PCA/deepvariant.cohort_filtered.gcf (1.5M)
   <span class="op">)</span>
 </code></pre>
 </div>
-<pre class="scroll-100"><code>SNV pruning based on LD:
+<pre><code>SNV pruning based on LD:
 Calculating allele counts/frequencies ...
 
 [..................................................]  0%, ETC: ---    
@@ -1775,10 +1766,10 @@ Chromosome P01-06G-7363: 100.00%, 1/1
 <pre class="sourceCode r"><code class="sourceCode r"><span class="va">pruned</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/unlist.html">unlist</a></span><span class="op">(</span><span class="va">snpset</span>, use.names <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span>
 
 <span class="co">#KING method of moment for the identity-by-descent (IBD) analysis</span>
-<span class="va">king</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/SNPRelate/man/snpgdsIBDKING.html">snpgdsIBDKING</a></span><span class="op">(</span><span class="va">gds</span>, autosome.only <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span>
+<span class="va">king</span> <span class="op">&lt;-</span> <span class="fu">snpgdsIBDKING</span><span class="op">(</span><span class="va">gds</span>, autosome.only <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span>
 </code></pre>
 </div>
-<pre class="scroll-100"><code>IBD analysis (KING method of moment) on genotypes:
+<pre><code>IBD analysis (KING method of moment) on genotypes:
 Calculating allele counts/frequencies ...
 
 [..................................................]  0%, ETC: ---    
@@ -1790,18 +1781,18 @@ Calculating allele counts/frequencies ...
 No family is specified, and all individuals are treated as singletons.
 Relationship inference in the presence of population stratification.
 CPU capabilities: Double-Precision SSE2
-Wed Jun  9 15:18:16 2021    (internal increment: 65536)
+Wed Jun  9 15:32:51 2021    (internal increment: 65536)
 
 [..................................................]  0%, ETC: ---        
 [==================================================] 100%, completed, 0s
-Wed Jun  9 15:18:16 2021    Done.</code></pre>
+Wed Jun  9 15:32:51 2021    Done.</code></pre>
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span class="va">kingMat</span> <span class="op">&lt;-</span> <span class="va">king</span><span class="op">$</span><span class="va">kinship</span>
-<span class="fu"><a href="https://rdrr.io/pkg/Biobase/man/class.eSet.html">dimnames</a></span><span class="op">(</span><span class="va">kingMat</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span><span class="va">king</span><span class="op">$</span><span class="va">sample.id</span>, <span class="va">king</span><span class="op">$</span><span class="va">sample.id</span><span class="op">)</span>
+<span class="fu"><a href="https://rdrr.io/r/base/dimnames.html">dimnames</a></span><span class="op">(</span><span class="va">kingMat</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span><span class="va">king</span><span class="op">$</span><span class="va">sample.id</span>, <span class="va">king</span><span class="op">$</span><span class="va">sample.id</span><span class="op">)</span>
 
 
 <span class="va">pcs</span> <span class="op">&lt;-</span>
-  <span class="fu"><a href="https://rdrr.io/pkg/GENESIS/man/pcair.html">pcair</a></span><span class="op">(</span>
+  <span class="fu">pcair</span><span class="op">(</span>
     <span class="va">seqData</span>,
     kinobj <span class="op">=</span> <span class="va">kingMat</span>,
     kin.thresh <span class="op">=</span> <span class="fl">0.9</span>,
@@ -1813,7 +1804,7 @@ Wed Jun  9 15:18:16 2021    Done.</code></pre>
   <span class="op">)</span>
 </code></pre>
 </div>
-<pre class="scroll-100"><code>Principal Component Analysis (PCA) on genotypes:
+<pre><code>Principal Component Analysis (PCA) on genotypes:
 Calculating allele counts/frequencies ...
 # of selected variants: 1,017
     # of samples: 282
@@ -1821,17 +1812,17 @@ Calculating allele counts/frequencies ...
     using 20 threads
     # of principal components: 32
 CPU capabilities: Double-Precision SSE2
-Wed Jun  9 15:18:16 2021    (internal increment: 3456)
+Wed Jun  9 15:32:52 2021    (internal increment: 3456)
 
 [..................................................]  0%, ETC: ---        
 [==================================================] 100%, completed, 0s
-Wed Jun  9 15:18:16 2021    Begin (eigenvalues and eigenvectors)
-Wed Jun  9 15:18:16 2021    Done.</code></pre>
+Wed Jun  9 15:32:52 2021    Begin (eigenvalues and eigenvectors)
+Wed Jun  9 15:32:52 2021    Done.</code></pre>
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span class="fu"><a href="https://rdrr.io/r/base/summary.html">summary</a></span><span class="op">(</span><span class="va">pcs</span><span class="op">)</span>
 </code></pre>
 </div>
-<pre class="scroll-100"><code>Call:
+<pre><code>Call:
 .pcair(gdsobj = gdsobj, kinobj = ..1, divobj = ..3, kin.thresh = 0.9, 
     div.thresh = ..4, snp.include = ..5, num.cores = 20, autosome.only = FALSE)
 

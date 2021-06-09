@@ -17,14 +17,6 @@ editor_options:
   chunk_output_type: console
 ---
 
-```{css, echo=FALSE}
-.scroll-100 {
-  max-height: 100px;
-  overflow-y: auto;
-  background-color: inherit;
-}
-```
-
 
 
 ```{r install package, eval=FALSE, include=FALSE}
@@ -55,7 +47,7 @@ library(hrbrthemes)
 
 # 1 Convert VCF to GDS
 
-```{r VCF to GDS, message=FALSE, warning=FALSE, cache=TRUE, class.output="scroll-100",  max.height='100px'}
+```{r VCF to GDS, message=FALSE, warning=FALSE, cache=TRUE}
 seqVCF2GDS("deepvariant.cohort_filtered.vcf.gz", "deepvariant.cohort_filtered.gcf")
 
 showfile.gds(closeall = TRUE)
@@ -106,7 +98,7 @@ seqData <- SeqVarData(gds, sampleData = annot)
 
 These plots help to visualize population structure in the sample and identify clusters of individuals with similar ancestry.
 
-```{r PC-AiR, message=FALSE, warning=FALSE, cache=TRUE, class.output="scroll-100"}
+```{r PC-AiR, message=FALSE, warning=FALSE, cache=TRUE}
 # subset of SNPs that are in approximate linkage equilibrium with each other
 snpset <-
   snpgdsLDpruning(
