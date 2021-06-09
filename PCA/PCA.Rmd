@@ -43,6 +43,7 @@ library(dplyr)
 library(ggplot2)
 library(ggrepel)
 library(hrbrthemes)
+setwd("~/Project/Ginseng/PCA")
 ```
 
 # 1 Convert VCF to GDS
@@ -220,7 +221,7 @@ p <- pca(mat, metadata = metadata, removeVar = 0.1)
 ```{r correlation and pca range, cache=TRUE, layout="l-body-outset"}
 
 annot_1 <- read.csv("sample_w_ID.list", sep = "\t")
-
+#summary(annot_1)
 #sanity check
 all.equal(annot_1$sample.id, as.numeric(pcs$sample.id)) #### It has to be TRUE!
 
@@ -271,7 +272,10 @@ eigencorplot(
     'Province',
     'Sample.type',
     'Conc..ng.µL.',
-    'A260.A280'
+    'A260.A280',
+    "X..Dups",
+    "M.Seqs",
+    "gDNA.quality"
   ),
   col = c('white', 'cornsilk1', 'gold', 'forestgreen', 'darkgreen'),
   cexCorval = 1.2,
