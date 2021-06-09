@@ -41,7 +41,7 @@ BiocManager::install("SNPRelate")
 
 
 ```{r setup, cache=TRUE, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
+knitr::opts_chunk$set(echo = TRUE)
 library(SeqArray)
 library(GENESIS)
 library(Biobase)
@@ -55,7 +55,7 @@ library(hrbrthemes)
 
 # 1 Convert VCF to GDS
 
-```{r VCF to GDS, message=FALSE, warning=FALSE, cache=TRUE, class.output="scroll-100"}
+```{r VCF to GDS, message=FALSE, warning=FALSE, cache=TRUE, class.output="scroll-100",  max.height='100px'}
 seqVCF2GDS("deepvariant.cohort_filtered.vcf.gz", "deepvariant.cohort_filtered.gcf")
 
 showfile.gds(closeall = TRUE)
@@ -242,23 +242,18 @@ p$xvars <- row.names(pcs$vectors)
 p$metadata <- annot_1
 p$variance <- setNames(as.numeric(pcs$values), PCA_name)
 p$loadings <- c(0, 0)
-biplot(p)
+#biplot(p)
 
 biplot( p, lab = p$metadata$M.Seqs, #change the metata to plot
   hline = 0,
   vline = 0,
-  legendPosition = 'right',
-  
+  legendPosition = 'right'
 )
 ```
 
+Figure: Metadata number of read
 
 ## Pairs plot
-
-```{r message=FALSE, warning=FALSE, include=FALSE, cache=TRUE, layout="l-body-outset"}
-plot_pair <- pairsplot(p)
-plot_pair
-```
 
 
 ```{r Pairs plot, message=FALSE, warning=FALSE, cache=TRUE}
@@ -269,40 +264,6 @@ dev.off()
 ```
 
 ## Corelation plot
-```{r cor plot, message=FALSE, warning=FALSE, include=FALSE, cache=TRUE, layout="l-body-outset"}
-pl <- eigencorplot(
-  p,
-  components = getComponents(p, 1:10),
-  metavars = c(
-    'Cultivating.status',
-    'HiSeq.Lane',
-    'Library.pool',
-    'Population.name',
-    'District',
-    'Province',
-    'Sample.type',
-    'Conc..ng.µL.',
-    'A260.A280',
-    'X..Dups',
-    'M.Seqs',
-    'gDNA.quality'
-  ),
-  col = c('white', 'cornsilk1', 'gold', 'forestgreen', 'darkgreen'),
-  cexCorval = 1.2,
-  fontCorval = 2,
-  posLab = 'all',
-  rotLabX = 45,
-  scale = TRUE,
-  main = bquote(Principal ~ component ~ Pearson ~ r ^ 2 ~ metadata ~ correlates),
-  plotRsquared = TRUE,
-  corFUN = 'pearson',
-  corUSE = 'pairwise.complete.obs',
-  corMultipleTestCorrection = 'BH',
-  signifSymbols = c('****', '***', '**', '*', ''),
-  signifCutpoints = c(0, 0.0001, 0.001, 0.01, 0.05, 1)
-)
-pl
-```
 
 ```{r eigencorplot plot, message=FALSE, warning=FALSE, cache=TRUE}
 pdf(file="PCA ~ Pearson ~ r^2 ~ metadata ~ correlates.pdf", width=20,height=10 )
