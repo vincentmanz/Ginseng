@@ -116,7 +116,7 @@ https://speciationgenomics.github.io/filtering_vcfs/
 #Make basic statistics for R 
 mkdir -p ./vcftools
 VCF=test_deepvariant.cohort.vcf.gz
-OUT=./vcftools/test_deepvariant.cohort
+OUT=./vcftools/deepvariant.cohort
 #Calculate allele frequency
 vcftools --gzvcf $VCF --freq2 --out $OUT --max-alleles 2
 #mean depth of coverage per individual
@@ -135,25 +135,25 @@ vcftools --gzvcf $VCF --het --out $OUT
 
 #Filtering the vcf file after the SNP calling
 VCF=../test_deepvariant.cohort.vcf.gz
-VCF_OUT=test_deepvariant.cohort_filtered.vcf.gz
+VCF_OUT=deepvariant.cohort_filtered.vcf.gz
 # set filters
-MAF=0.05
+MAF=0.10
 MISS=0.8
-QUAL=30
-MIN_DEPTH=20
+QUAL=50
+MIN_DEPTH=30
 # move to the vcf directory
 cd vcftools
 # perform the filtering with vcftools
 vcftools --gzvcf $VCF \
 --remove-indels --maf $MAF --max-missing $MISS --minQ $QUAL \
 --min-meanDP $MIN_DEPTH \
---minDP $MIN_DEPTH --recode --stdout | gzip -c > \
+--recode --stdout | gzip -c > \
 $VCF_OUT
 
 mkdir -p ./vcftools
 
-VCF=test_deepvariant.cohort_filtered.vcf.gz
-OUT=./vcftools/test_deepvariant.cohort_filtered_out.vcf.gz
+VCF=deepvariant.cohort_filtered.vcf.gz
+OUT=./vcftools/deepvariant.cohort_filtered_out.vcf.gz
 #Calculate allele frequency
 vcftools --gzvcf $VCF --freq2 --out $OUT --max-alleles 2
 #mean depth of coverage per individual
