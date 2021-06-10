@@ -49,7 +49,7 @@ setwd("~/Project/Ginseng/PCA")
 # 1 Convert VCF to GDS
 
 ```{r VCF to GDS, message=FALSE, warning=FALSE, cache=TRUE}
-seqVCF2GDS("deepvariant.cohort_filtered.vcf.gz", "deepvariant.cohort_filtered.gcf")
+seqVCF2GDS("../PCA/deepvariant.cohort_filtered.vcf.gz", "deepvariant.cohort_filtered.gcf")
 
 showfile.gds(closeall = TRUE)
 gds <- seqOpen("deepvariant.cohort_filtered.gcf")
@@ -265,17 +265,17 @@ eigencorplot(
   components = getComponents(p, 1:10),
   metavars = c(
     'Cultivating.status',
-    'HiSeq.Lane',
-    'Library.pool',
+#    'HiSeq.Lane',
+#    'Library.pool',
     'Population.name',
     'District',
     'Province',
-    'Sample.type',
-    'Conc..ng.µL.',
-    'A260.A280',
-    "X..Dups",
-    "M.Seqs",
-    "gDNA.quality"
+#    'Sample.type',
+#    'Conc..ng.µL.',
+#    'A260.A280',
+#    "X..Dups",
+#    "M.Seqs"
+#    "gDNA.quality"
   ),
   col = c('white', 'cornsilk1', 'gold', 'forestgreen', 'darkgreen'),
   cexCorval = 1.2,
@@ -502,7 +502,50 @@ ggsave(
 )
 ```
 
+## Province
 
+```{r PCA Province, message=FALSE, warning=FALSE, cache=TRUE, layout="l-body-outset"}
+# PCA With domestic vs wild populations
+ggplot(pc.df, aes(x = PC1, y = PC2, color = Province)) +
+  geom_point(size = 5) +
+  geom_label_repel(
+    aes(label = sample.id),
+    box.padding   = 0.15,
+    point.padding = 0.5,
+    segment.color = "grey50",
+        max.time = 1,
+    max.iter = 2000,
+    max.overlaps	= 12
+  ) +
+  xlab(Axis_PC1) +
+  ylab(Axis_PC2) +
+  ggtitle("Province", subtitle = "Variant calling with Deep Variant, the duplicate reads were marked.\n A total of 1181 SNPs.") +
+  theme_ipsum(axis_title_size = 11) +
+  scale_color_manual(values = c("#c1232b","#27727b", "#fcce10", "#e87c25", "#b5c334", "#fe8463"))
+
+ggsave(
+  filename = "Province - labels.png",
+  device = "png",
+  width = 20,
+  height = 10
+)
+
+# PCA With domestic vs wild populations - NO LABELS
+ggplot(pc.df, aes(PC1, PC2, color = Province)) +
+  geom_point(size = 5) +
+  xlab(Axis_PC1) +
+  ylab(Axis_PC2) +
+  ggtitle("Province", subtitle = "Variant calling with Deep Variant, the duplicate reads were marked.\n A total of 1181 SNPs.") +
+  theme_ipsum(axis_title_size = 11) +
+  scale_color_manual(values = c("#c1232b","#27727b", "#fcce10", "#e87c25", "#b5c334", "#fe8463"))
+
+ggsave(
+  filename = "Province - nolabels.png",
+  device = "png",
+  width = 20,
+  height = 10
+)
+```
 
 
 Reference of the pipeline: 

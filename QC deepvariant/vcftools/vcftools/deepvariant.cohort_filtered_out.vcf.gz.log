@@ -1,0 +1,14 @@
+
+VCFtools - 0.1.15
+(C) Adam Auton and Anthony Marcketta 2009
+
+Parameters as interpreted:
+	--gzvcf deepvariant.cohort_filtered.vcf.gz
+	--het
+	--out ./vcftools/deepvariant.cohort_filtered_out.vcf.gz
+
+Using zlib version: 1.2.11
+After filtering, kept 282 out of 282 Individuals
+Outputting Individual Heterozygosity
+After filtering, kept 145 out of a possible 145 Sites
+Run Time = 0.00 seconds

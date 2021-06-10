@@ -91,10 +91,6 @@ done ;
 
 
 #sudo docker pull quay.io/mlin/glnexus:v1.2.7
-sudo chown $USER *vcf.gz
-sudo chown $USER *vcf.gz.tbi
-sudo chown $USER  *.html
-
 
 VCF=$(ls *.vcf.gz)
 

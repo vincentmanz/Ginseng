@@ -3,13 +3,10 @@ VCFtools - 0.1.15
 (C) Adam Auton and Anthony Marcketta 2009
 
 Parameters as interpreted:
-	--gzvcf ../deepvariant.cohort_round2.vcf.gz
-	--maf 0.05
-	--maxDP 500
-	--max-meanDP 500
-	--minDP 10
-	--min-meanDP 10
-	--minQ 30
+	--gzvcf ../test_deepvariant.cohort.vcf.gz
+	--maf 0.1
+	--min-meanDP 30
+	--minQ 50
 	--max-missing 0.8
 	--recode
 	--remove-indels
@@ -18,5 +15,5 @@ Parameters as interpreted:
 Using zlib version: 1.2.11
 After filtering, kept 282 out of 282 Individuals
 Outputting VCF file...
-After filtering, kept 1181 out of a possible 28982 Sites
-Run Time = 2.00 seconds
+After filtering, kept 145 out of a possible 24991 Sites
+Run Time = 1.00 seconds
