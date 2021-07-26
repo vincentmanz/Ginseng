@@ -1,6 +1,7 @@
-Target capture reveals the complex origin of Vietnamese ginseng (Panax
-vietnamensis)
-================
+
+![panax](https://github.com/vincentmanz/Ginseng/blob/main/image/1047232585901b1.jpg?raw=true)
+
+# Target capture reveals the complex origin of Vietnamese ginseng (Panax vietnamensis)
 
 Hien Thi Thu LE1,2\*, Linh Nhat NGUYEN1, Hang Le Bich PHAM1, Hao Thi My
 LE3, Toan Duc LUONG3, Hue Thi Thu HUYNH1,2, Van Tuong NGUYEN4, Hai Van
