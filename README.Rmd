@@ -31,5 +31,8 @@ Hien Thi Thu LE1,2\*, Linh Nhat NGUYEN1, Hang Le Bich PHAM1, Hao Thi My LE3, Toa
 
 # Figures
 
+<p align="center">
+<img width="920" height="600" src="https://github.com/vincentmanz/Ginseng/blob/main/Figures/Figure%204%20Admixture%20average%20on%20map.pdf?raw=true">
+</p>
 
 

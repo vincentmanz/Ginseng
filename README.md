@@ -28,8 +28,15 @@ Agricultural Sciences, 10 Duc Thang, Bac Tu Liem, Hanoi, 10000, Vietnam
 6Baseclear BV, 2333 Leiden, Netherlands.
 
 \*Corresponding authors: Hien Thi Thu LE (<hienlethu@igr.ac.vn>) and
-Vincent MANZANILLA (<vincent.manzanilla@gmail.com>)
+Vincent MANZANILLA
+(<vincent.manzanilla@gmail.com>)
 
 # Abstract
 
 # Figures
+
+<p align="center">
+
+<img width="920" height="600" src="https://github.com/vincentmanz/Ginseng/blob/main/Figures/Figure%204%20Admixture%20average%20on%20map.pdf?raw=true">
+
+</p>
