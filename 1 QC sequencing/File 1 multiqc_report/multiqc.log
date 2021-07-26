@@ -1,0 +1,771 @@
+[2020-06-04 01:44:21,536] multiqc                                            [DEBUG  ]  No MultiQC config found: /home/vincent/pycoQC/lib/python3.6/site-packages/multiqc_config.yaml
+[2020-06-04 01:44:21,536] multiqc                                            [DEBUG  ]  No MultiQC config found: /home/vincent/.multiqc_config.yaml
+[2020-06-04 01:44:21,536] multiqc                                            [DEBUG  ]  No MultiQC config found: multiqc_config.yaml
+[2020-06-04 01:44:21,536] multiqc                                            [DEBUG  ]  Command used: /home/vincent/pycoQC/bin/multiqc -d fastQC/
+[2020-06-04 01:44:21,656] multiqc                                            [DEBUG  ]  Latest MultiQC version is v1.9
+[2020-06-04 01:44:21,656] multiqc                                            [INFO   ]  This is MultiQC v1.9
+[2020-06-04 01:44:21,656] multiqc                                            [DEBUG  ]  Command     : /home/vincent/pycoQC/bin/multiqc -d fastQC/
+[2020-06-04 01:44:21,656] multiqc                                            [DEBUG  ]  Working dir : /media/vincent/Data/panax/2_trimmed/pooled_sample
+[2020-06-04 01:44:21,656] multiqc                                            [INFO   ]  Template    : default
+[2020-06-04 01:44:21,656] multiqc                                            [DEBUG  ]  Running Python 3.6.9 (default, Apr 18 2020, 01:56:04)  [GCC 8.4.0]
+[2020-06-04 01:44:21,656] multiqc                                            [INFO   ]  Prepending directory to sample names
+[2020-06-04 01:44:21,656] multiqc                                            [INFO   ]  Searching   : /media/vincent/Data/panax/2_trimmed/pooled_sample/fastQC
+[2020-06-04 01:44:21,657] multiqc                                            [DEBUG  ]  Analysing modules: custom_content, conpair, peddy, somalier, methylQA, mosdepth, phantompeakqualtools, qualimap, preseq, quast, qorts, rna_seqc, rockhopper, rsem, rseqc, busco, goleft_indexcov, disambiguate, supernova, deeptools, sargasso, verifybamid, mirtrace, happy, mirtop, homer, macs2, theta2, snpeff, gatk, htseq, bcftools, featureCounts, fgbio, dragen, dedup, damageprofiler, biobambam2, mtnucratio, picard, prokka, samblaster, samtools, sexdeterrmine, bamtools, jellyfish, vcftools, longranger, stacks, varscan2, bbmap, bismark, biscuit, hicexplorer, hicup, hicpro, salmon, kallisto, slamdunk, star, hisat2, tophat, bowtie2, bowtie1, snpsplit, kat, leehom, adapterRemoval, clipandmerge, cutadapt, flexbar, kaiju, kraken, malt, trimmomatic, sickle, skewer, sortmerna, biobloomtools, fastq_screen, afterqc, fastp, fastqc, pycoqc, minionqc, multivcfanalyzer, clusterflow, bcl2fastq, interop, ivar, flash, seqyclean
+[2020-06-04 01:44:21,657] multiqc                                            [DEBUG  ]  Using temporary directory for creating report: /tmp/tmpr06661kg
+[2020-06-04 01:44:21,786] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 46_fastqc.html
+[2020-06-04 01:44:21,789] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 46_fastqc.html
+[2020-06-04 01:44:21,839] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 268_fastqc.html
+[2020-06-04 01:44:21,841] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 268_fastqc.html
+[2020-06-04 01:44:21,923] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 166_fastqc.html
+[2020-06-04 01:44:21,925] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 166_fastqc.html
+[2020-06-04 01:44:22,003] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 43_fastqc.html
+[2020-06-04 01:44:22,005] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 43_fastqc.html
+[2020-06-04 01:44:22,049] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 235_fastqc.html
+[2020-06-04 01:44:22,051] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 235_fastqc.html
+[2020-06-04 01:44:22,146] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 126_fastqc.html
+[2020-06-04 01:44:22,148] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 126_fastqc.html
+[2020-06-04 01:44:22,196] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 202_fastqc.html
+[2020-06-04 01:44:22,198] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 202_fastqc.html
+[2020-06-04 01:44:22,223] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 296_fastqc.html
+[2020-06-04 01:44:22,224] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 296_fastqc.html
+[2020-06-04 01:44:22,246] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 322_fastqc.html
+[2020-06-04 01:44:22,247] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 322_fastqc.html
+[2020-06-04 01:44:22,322] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 10_fastqc.html
+[2020-06-04 01:44:22,324] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 10_fastqc.html
+[2020-06-04 01:44:22,374] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 181_fastqc.html
+[2020-06-04 01:44:22,376] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 181_fastqc.html
+[2020-06-04 01:44:22,464] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 3_fastqc.html
+[2020-06-04 01:44:22,466] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 3_fastqc.html
+[2020-06-04 01:44:22,512] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 65_fastqc.html
+[2020-06-04 01:44:22,520] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 65_fastqc.html
+[2020-06-04 01:44:22,566] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 211_fastqc.html
+[2020-06-04 01:44:22,568] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 211_fastqc.html
+[2020-06-04 01:44:22,594] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 327_fastqc.html
+[2020-06-04 01:44:22,596] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 327_fastqc.html
+[2020-06-04 01:44:22,636] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 284_fastqc.html
+[2020-06-04 01:44:22,638] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 284_fastqc.html
+[2020-06-04 01:44:22,701] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 98_fastqc.html
+[2020-06-04 01:44:22,703] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 98_fastqc.html
+[2020-06-04 01:44:22,746] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 129_fastqc.html
+[2020-06-04 01:44:22,748] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 129_fastqc.html
+[2020-06-04 01:44:22,804] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 172_fastqc.html
+[2020-06-04 01:44:22,806] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 172_fastqc.html
+[2020-06-04 01:44:22,856] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 54_fastqc.html
+[2020-06-04 01:44:22,862] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 54_fastqc.html
+[2020-06-04 01:44:22,906] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 80_fastqc.html
+[2020-06-04 01:44:22,908] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 80_fastqc.html
+[2020-06-04 01:44:22,936] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 318_fastqc.html
+[2020-06-04 01:44:22,937] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 318_fastqc.html
+[2020-06-04 01:44:22,973] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 66_fastqc.html
+[2020-06-04 01:44:22,974] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 66_fastqc.html
+[2020-06-04 01:44:23,020] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 149_fastqc.html
+[2020-06-04 01:44:23,022] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 149_fastqc.html
+[2020-06-04 01:44:23,117] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 193_fastqc.html
+[2020-06-04 01:44:23,119] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 193_fastqc.html
+[2020-06-04 01:44:23,147] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 320_fastqc.html
+[2020-06-04 01:44:23,148] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 320_fastqc.html
+[2020-06-04 01:44:23,195] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 288_fastqc.html
+[2020-06-04 01:44:23,197] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 288_fastqc.html
+[2020-06-04 01:44:23,244] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 64_fastqc.html
+[2020-06-04 01:44:23,246] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 64_fastqc.html
+[2020-06-04 01:44:23,335] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 160_fastqc.html
+[2020-06-04 01:44:23,337] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 160_fastqc.html
+[2020-06-04 01:44:23,381] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 77_fastqc.html
+[2020-06-04 01:44:23,383] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 77_fastqc.html
+[2020-06-04 01:44:23,434] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 108_fastqc.html
+[2020-06-04 01:44:23,436] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 108_fastqc.html
+[2020-06-04 01:44:23,484] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 151_fastqc.html
+[2020-06-04 01:44:23,486] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 151_fastqc.html
+[2020-06-04 01:44:23,578] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 207_fastqc.html
+[2020-06-04 01:44:23,579] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 207_fastqc.html
+[2020-06-04 01:44:23,625] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 238_fastqc.html
+[2020-06-04 01:44:23,627] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 238_fastqc.html
+[2020-06-04 01:44:23,685] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 215_fastqc.html
+[2020-06-04 01:44:23,687] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 215_fastqc.html
+[2020-06-04 01:44:23,727] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 174_fastqc.html
+[2020-06-04 01:44:23,728] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 174_fastqc.html
+[2020-06-04 01:44:23,778] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 128_fastqc.html
+[2020-06-04 01:44:23,780] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 128_fastqc.html
+[2020-06-04 01:44:23,875] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 219_fastqc.html
+[2020-06-04 01:44:23,877] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 219_fastqc.html
+[2020-06-04 01:44:23,927] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 30_fastqc.html
+[2020-06-04 01:44:23,929] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 30_fastqc.html
+[2020-06-04 01:44:23,985] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 79_fastqc.html
+[2020-06-04 01:44:23,987] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 79_fastqc.html
+[2020-06-04 01:44:24,036] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 109_fastqc.html
+[2020-06-04 01:44:24,038] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 109_fastqc.html
+[2020-06-04 01:44:24,124] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 40_fastqc.html
+[2020-06-04 01:44:24,126] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 40_fastqc.html
+[2020-06-04 01:44:24,174] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 203_fastqc.html
+[2020-06-04 01:44:24,176] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 203_fastqc.html
+[2020-06-04 01:44:24,203] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 294_fastqc.html
+[2020-06-04 01:44:24,204] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 294_fastqc.html
+[2020-06-04 01:44:24,247] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 165_fastqc.html
+[2020-06-04 01:44:24,249] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 165_fastqc.html
+[2020-06-04 01:44:24,292] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 67_fastqc.html
+[2020-06-04 01:44:24,294] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 67_fastqc.html
+[2020-06-04 01:44:24,379] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 114_fastqc.html
+[2020-06-04 01:44:24,381] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 114_fastqc.html
+[2020-06-04 01:44:24,428] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 113_fastqc.html
+[2020-06-04 01:44:24,430] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 113_fastqc.html
+[2020-06-04 01:44:24,469] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 232_fastqc.html
+[2020-06-04 01:44:24,471] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 232_fastqc.html
+[2020-06-04 01:44:24,517] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 7_fastqc.html
+[2020-06-04 01:44:24,519] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 7_fastqc.html
+[2020-06-04 01:44:24,544] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 304_fastqc.html
+[2020-06-04 01:44:24,545] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 304_fastqc.html
+[2020-06-04 01:44:24,587] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 39_fastqc.html
+[2020-06-04 01:44:24,589] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 39_fastqc.html
+[2020-06-04 01:44:24,615] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 314_fastqc.html
+[2020-06-04 01:44:24,616] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 314_fastqc.html
+[2020-06-04 01:44:24,660] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 260_fastqc.html
+[2020-06-04 01:44:24,662] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 260_fastqc.html
+[2020-06-04 01:44:24,712] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 87_fastqc.html
+[2020-06-04 01:44:24,714] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 87_fastqc.html
+[2020-06-04 01:44:24,771] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 210_fastqc.html
+[2020-06-04 01:44:24,772] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 210_fastqc.html
+[2020-06-04 01:44:24,813] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 168_fastqc.html
+[2020-06-04 01:44:24,815] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 168_fastqc.html
+[2020-06-04 01:44:24,841] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 300_fastqc.html
+[2020-06-04 01:44:24,842] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 300_fastqc.html
+[2020-06-04 01:44:24,882] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 21_fastqc.html
+[2020-06-04 01:44:24,884] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 21_fastqc.html
+[2020-06-04 01:44:24,962] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 217_fastqc.html
+[2020-06-04 01:44:24,964] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 217_fastqc.html
+[2020-06-04 01:44:25,007] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 173_fastqc.html
+[2020-06-04 01:44:25,009] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 173_fastqc.html
+[2020-06-04 01:44:25,074] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 155_fastqc.html
+[2020-06-04 01:44:25,076] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 155_fastqc.html
+[2020-06-04 01:44:25,129] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 103_fastqc.html
+[2020-06-04 01:44:25,131] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 103_fastqc.html
+[2020-06-04 01:44:25,170] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 27_fastqc.html
+[2020-06-04 01:44:25,172] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 27_fastqc.html
+[2020-06-04 01:44:25,199] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 89_fastqc.html
+[2020-06-04 01:44:25,201] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 89_fastqc.html
+[2020-06-04 01:44:25,256] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 118_fastqc.html
+[2020-06-04 01:44:25,258] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 118_fastqc.html
+[2020-06-04 01:44:25,281] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 309_fastqc.html
+[2020-06-04 01:44:25,282] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 309_fastqc.html
+[2020-06-04 01:44:25,318] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 26_fastqc.html
+[2020-06-04 01:44:25,320] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 26_fastqc.html
+[2020-06-04 01:44:25,401] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 182_fastqc.html
+[2020-06-04 01:44:25,403] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 182_fastqc.html
+[2020-06-04 01:44:25,445] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 102_fastqc.html
+[2020-06-04 01:44:25,447] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 102_fastqc.html
+[2020-06-04 01:44:25,484] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 130_fastqc.html
+[2020-06-04 01:44:25,486] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 130_fastqc.html
+[2020-06-04 01:44:25,530] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 161_fastqc.html
+[2020-06-04 01:44:25,532] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 161_fastqc.html
+[2020-06-04 01:44:25,619] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 223_fastqc.html
+[2020-06-04 01:44:25,621] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 223_fastqc.html
+[2020-06-04 01:44:25,661] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 226_fastqc.html
+[2020-06-04 01:44:25,662] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 226_fastqc.html
+[2020-06-04 01:44:25,762] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 157_fastqc.html
+[2020-06-04 01:44:25,764] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 157_fastqc.html
+[2020-06-04 01:44:25,815] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 195_fastqc.html
+[2020-06-04 01:44:25,817] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 195_fastqc.html
+[2020-06-04 01:44:25,899] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 48_fastqc.html
+[2020-06-04 01:44:25,901] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 48_fastqc.html
+[2020-06-04 01:44:26,010] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 25_fastqc.html
+[2020-06-04 01:44:26,012] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 25_fastqc.html
+[2020-06-04 01:44:26,053] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 61_fastqc.html
+[2020-06-04 01:44:26,054] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 61_fastqc.html
+[2020-06-04 01:44:26,080] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 302_fastqc.html
+[2020-06-04 01:44:26,081] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 302_fastqc.html
+[2020-06-04 01:44:26,128] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 132_fastqc.html
+[2020-06-04 01:44:26,130] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 132_fastqc.html
+[2020-06-04 01:44:26,218] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 239_fastqc.html
+[2020-06-04 01:44:26,220] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 239_fastqc.html
+[2020-06-04 01:44:26,264] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 23_fastqc.html
+[2020-06-04 01:44:26,266] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 23_fastqc.html
+[2020-06-04 01:44:26,314] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 9_fastqc.html
+[2020-06-04 01:44:26,316] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 9_fastqc.html
+[2020-06-04 01:44:26,384] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 252_fastqc.html
+[2020-06-04 01:44:26,386] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 252_fastqc.html
+[2020-06-04 01:44:26,434] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 253_fastqc.html
+[2020-06-04 01:44:26,436] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 253_fastqc.html
+[2020-06-04 01:44:26,484] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 63_fastqc.html
+[2020-06-04 01:44:26,485] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 63_fastqc.html
+[2020-06-04 01:44:26,515] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 70_fastqc.html
+[2020-06-04 01:44:26,516] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 70_fastqc.html
+[2020-06-04 01:44:26,562] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 152_fastqc.html
+[2020-06-04 01:44:26,563] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 152_fastqc.html
+[2020-06-04 01:44:26,640] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 276_fastqc.html
+[2020-06-04 01:44:26,642] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 276_fastqc.html
+[2020-06-04 01:44:26,762] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 285_fastqc.html
+[2020-06-04 01:44:26,764] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 285_fastqc.html
+[2020-06-04 01:44:26,805] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 258_fastqc.html
+[2020-06-04 01:44:26,807] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 258_fastqc.html
+[2020-06-04 01:44:26,883] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 112_fastqc.html
+[2020-06-04 01:44:26,885] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 112_fastqc.html
+[2020-06-04 01:44:26,929] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 86_fastqc.html
+[2020-06-04 01:44:26,931] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 86_fastqc.html
+[2020-06-04 01:44:26,972] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 255_fastqc.html
+[2020-06-04 01:44:26,974] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 255_fastqc.html
+[2020-06-04 01:44:27,000] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 305_fastqc.html
+[2020-06-04 01:44:27,001] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 305_fastqc.html
+[2020-06-04 01:44:27,038] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 121_fastqc.html
+[2020-06-04 01:44:27,040] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 121_fastqc.html
+[2020-06-04 01:44:27,140] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 188_fastqc.html
+[2020-06-04 01:44:27,142] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 188_fastqc.html
+[2020-06-04 01:44:27,193] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 204_fastqc.html
+[2020-06-04 01:44:27,195] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 204_fastqc.html
+[2020-06-04 01:44:27,235] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 287_fastqc.html
+[2020-06-04 01:44:27,236] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 287_fastqc.html
+[2020-06-04 01:44:27,314] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 141_fastqc.html
+[2020-06-04 01:44:27,316] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 141_fastqc.html
+[2020-06-04 01:44:27,359] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 290_fastqc.html
+[2020-06-04 01:44:27,361] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 290_fastqc.html
+[2020-06-04 01:44:27,445] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 183_fastqc.html
+[2020-06-04 01:44:27,447] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 183_fastqc.html
+[2020-06-04 01:44:27,490] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 88_fastqc.html
+[2020-06-04 01:44:27,492] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 88_fastqc.html
+[2020-06-04 01:44:27,580] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 191_fastqc.html
+[2020-06-04 01:44:27,582] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 191_fastqc.html
+[2020-06-04 01:44:27,631] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 154_fastqc.html
+[2020-06-04 01:44:27,632] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 154_fastqc.html
+[2020-06-04 01:44:27,722] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 58_fastqc.html
+[2020-06-04 01:44:27,724] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 58_fastqc.html
+[2020-06-04 01:44:27,772] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 84_fastqc.html
+[2020-06-04 01:44:27,774] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 84_fastqc.html
+[2020-06-04 01:44:27,801] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 293_fastqc.html
+[2020-06-04 01:44:27,802] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 293_fastqc.html
+[2020-06-04 01:44:27,841] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 17_fastqc.html
+[2020-06-04 01:44:27,842] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 17_fastqc.html
+[2020-06-04 01:44:27,898] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 56_fastqc.html
+[2020-06-04 01:44:27,900] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 56_fastqc.html
+[2020-06-04 01:44:27,926] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 292_fastqc.html
+[2020-06-04 01:44:27,927] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 292_fastqc.html
+[2020-06-04 01:44:27,949] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 303_fastqc.html
+[2020-06-04 01:44:27,950] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 303_fastqc.html
+[2020-06-04 01:44:27,992] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 246_fastqc.html
+[2020-06-04 01:44:27,994] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 246_fastqc.html
+[2020-06-04 01:44:28,042] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 100_fastqc.html
+[2020-06-04 01:44:28,044] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 100_fastqc.html
+[2020-06-04 01:44:28,103] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 1_fastqc.html
+[2020-06-04 01:44:28,105] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 1_fastqc.html
+[2020-06-04 01:44:28,151] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 127_fastqc.html
+[2020-06-04 01:44:28,153] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 127_fastqc.html
+[2020-06-04 01:44:28,195] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 274_fastqc.html
+[2020-06-04 01:44:28,197] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 274_fastqc.html
+[2020-06-04 01:44:28,234] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 224_fastqc.html
+[2020-06-04 01:44:28,237] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 224_fastqc.html
+[2020-06-04 01:44:28,262] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 247_fastqc.html
+[2020-06-04 01:44:28,263] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 247_fastqc.html
+[2020-06-04 01:44:28,307] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 73_fastqc.html
+[2020-06-04 01:44:28,309] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 73_fastqc.html
+[2020-06-04 01:44:28,340] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 169_fastqc.html
+[2020-06-04 01:44:28,342] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 169_fastqc.html
+[2020-06-04 01:44:28,367] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 328_fastqc.html
+[2020-06-04 01:44:28,368] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 328_fastqc.html
+[2020-06-04 01:44:28,408] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 286_fastqc.html
+[2020-06-04 01:44:28,410] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 286_fastqc.html
+[2020-06-04 01:44:28,455] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 117_fastqc.html
+[2020-06-04 01:44:28,457] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 117_fastqc.html
+[2020-06-04 01:44:28,510] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 38_fastqc.html
+[2020-06-04 01:44:28,512] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 38_fastqc.html
+[2020-06-04 01:44:28,557] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 176_fastqc.html
+[2020-06-04 01:44:28,559] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 176_fastqc.html
+[2020-06-04 01:44:28,629] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 220_fastqc.html
+[2020-06-04 01:44:28,631] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 220_fastqc.html
+[2020-06-04 01:44:28,682] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 69_fastqc.html
+[2020-06-04 01:44:28,684] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 69_fastqc.html
+[2020-06-04 01:44:28,783] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 218_fastqc.html
+[2020-06-04 01:44:28,785] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 218_fastqc.html
+[2020-06-04 01:44:28,829] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 148_fastqc.html
+[2020-06-04 01:44:28,830] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 148_fastqc.html
+[2020-06-04 01:44:28,919] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 281_fastqc.html
+[2020-06-04 01:44:28,921] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 281_fastqc.html
+[2020-06-04 01:44:28,969] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 22_fastqc.html
+[2020-06-04 01:44:28,971] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 22_fastqc.html
+[2020-06-04 01:44:29,030] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 198_fastqc.html
+[2020-06-04 01:44:29,032] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 198_fastqc.html
+[2020-06-04 01:44:29,077] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 177_fastqc.html
+[2020-06-04 01:44:29,079] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 177_fastqc.html
+[2020-06-04 01:44:29,135] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 60_fastqc.html
+[2020-06-04 01:44:29,137] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 60_fastqc.html
+[2020-06-04 01:44:29,364] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 24_fastqc.html
+[2020-06-04 01:44:29,366] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 24_fastqc.html
+[2020-06-04 01:44:29,414] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 5_fastqc.html
+[2020-06-04 01:44:29,416] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 5_fastqc.html
+[2020-06-04 01:44:29,442] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 308_fastqc.html
+[2020-06-04 01:44:29,443] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 308_fastqc.html
+[2020-06-04 01:44:29,466] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 301_fastqc.html
+[2020-06-04 01:44:29,467] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 301_fastqc.html
+[2020-06-04 01:44:29,506] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 261_fastqc.html
+[2020-06-04 01:44:29,508] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 261_fastqc.html
+[2020-06-04 01:44:29,553] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 144_fastqc.html
+[2020-06-04 01:44:29,555] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 144_fastqc.html
+[2020-06-04 01:44:29,586] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 42_fastqc.html
+[2020-06-04 01:44:29,587] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 42_fastqc.html
+[2020-06-04 01:44:29,644] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 277_fastqc.html
+[2020-06-04 01:44:29,646] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 277_fastqc.html
+[2020-06-04 01:44:29,692] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 81_fastqc.html
+[2020-06-04 01:44:29,694] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 81_fastqc.html
+[2020-06-04 01:44:29,754] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 254_fastqc.html
+[2020-06-04 01:44:29,756] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 254_fastqc.html
+[2020-06-04 01:44:29,806] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 147_fastqc.html
+[2020-06-04 01:44:29,808] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 147_fastqc.html
+[2020-06-04 01:44:29,852] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 185_fastqc.html
+[2020-06-04 01:44:29,854] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 185_fastqc.html
+[2020-06-04 01:44:29,923] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 2_fastqc.html
+[2020-06-04 01:44:29,925] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 2_fastqc.html
+[2020-06-04 01:44:29,974] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 75_fastqc.html
+[2020-06-04 01:44:29,975] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 75_fastqc.html
+[2020-06-04 01:44:30,020] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 135_fastqc.html
+[2020-06-04 01:44:30,022] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 135_fastqc.html
+[2020-06-04 01:44:30,119] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 156_fastqc.html
+[2020-06-04 01:44:30,121] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 156_fastqc.html
+[2020-06-04 01:44:30,164] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 95_fastqc.html
+[2020-06-04 01:44:30,166] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 95_fastqc.html
+[2020-06-04 01:44:30,211] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 116_fastqc.html
+[2020-06-04 01:44:30,213] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 116_fastqc.html
+[2020-06-04 01:44:30,259] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 32_fastqc.html
+[2020-06-04 01:44:30,261] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 32_fastqc.html
+[2020-06-04 01:44:30,301] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 192_fastqc.html
+[2020-06-04 01:44:30,303] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 192_fastqc.html
+[2020-06-04 01:44:30,376] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 52_fastqc.html
+[2020-06-04 01:44:30,378] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 52_fastqc.html
+[2020-06-04 01:44:30,424] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 13_fastqc.html
+[2020-06-04 01:44:30,426] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 13_fastqc.html
+[2020-06-04 01:44:30,495] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 139_fastqc.html
+[2020-06-04 01:44:30,497] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 139_fastqc.html
+[2020-06-04 01:44:30,542] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 111_fastqc.html
+[2020-06-04 01:44:30,543] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 111_fastqc.html
+[2020-06-04 01:44:30,630] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 194_fastqc.html
+[2020-06-04 01:44:30,632] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 194_fastqc.html
+[2020-06-04 01:44:30,676] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 143_fastqc.html
+[2020-06-04 01:44:30,678] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 143_fastqc.html
+[2020-06-04 01:44:30,724] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 62_fastqc.html
+[2020-06-04 01:44:30,726] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 62_fastqc.html
+[2020-06-04 01:44:30,813] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 205_fastqc.html
+[2020-06-04 01:44:30,815] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 205_fastqc.html
+[2020-06-04 01:44:30,864] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 164_fastqc.html
+[2020-06-04 01:44:30,866] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 164_fastqc.html
+[2020-06-04 01:44:30,912] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 145_fastqc.html
+[2020-06-04 01:44:30,914] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 145_fastqc.html
+[2020-06-04 01:44:30,939] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 295_fastqc.html
+[2020-06-04 01:44:30,940] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 295_fastqc.html
+[2020-06-04 01:44:30,984] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 115_fastqc.html
+[2020-06-04 01:44:30,986] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 115_fastqc.html
+[2020-06-04 01:44:31,010] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 319_fastqc.html
+[2020-06-04 01:44:31,011] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 319_fastqc.html
+[2020-06-04 01:44:31,047] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 251_fastqc.html
+[2020-06-04 01:44:31,049] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 251_fastqc.html
+[2020-06-04 01:44:31,138] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 76_fastqc.html
+[2020-06-04 01:44:31,140] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 76_fastqc.html
+[2020-06-04 01:44:31,211] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 124_fastqc.html
+[2020-06-04 01:44:31,213] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 124_fastqc.html
+[2020-06-04 01:44:31,264] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 136_fastqc.html
+[2020-06-04 01:44:31,266] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 136_fastqc.html
+[2020-06-04 01:44:31,371] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 72_fastqc.html
+[2020-06-04 01:44:31,373] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 72_fastqc.html
+[2020-06-04 01:44:31,397] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 248_fastqc.html
+[2020-06-04 01:44:31,398] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 248_fastqc.html
+[2020-06-04 01:44:31,422] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 297_fastqc.html
+[2020-06-04 01:44:31,423] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 297_fastqc.html
+[2020-06-04 01:44:31,468] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 14_fastqc.html
+[2020-06-04 01:44:31,470] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 14_fastqc.html
+[2020-06-04 01:44:31,516] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 82_fastqc.html
+[2020-06-04 01:44:31,518] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 82_fastqc.html
+[2020-06-04 01:44:31,572] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 227_fastqc.html
+[2020-06-04 01:44:31,574] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 227_fastqc.html
+[2020-06-04 01:44:31,624] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 234_fastqc.html
+[2020-06-04 01:44:31,626] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 234_fastqc.html
+[2020-06-04 01:44:31,670] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 270_fastqc.html
+[2020-06-04 01:44:31,672] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 270_fastqc.html
+[2020-06-04 01:44:31,714] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 244_fastqc.html
+[2020-06-04 01:44:31,716] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 244_fastqc.html
+[2020-06-04 01:44:31,742] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 312_fastqc.html
+[2020-06-04 01:44:31,743] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 312_fastqc.html
+[2020-06-04 01:44:31,818] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 138_fastqc.html
+[2020-06-04 01:44:31,820] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 138_fastqc.html
+[2020-06-04 01:44:31,921] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 91_fastqc.html
+[2020-06-04 01:44:31,923] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 91_fastqc.html
+[2020-06-04 01:44:31,976] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 137_fastqc.html
+[2020-06-04 01:44:31,978] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 137_fastqc.html
+[2020-06-04 01:44:32,020] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 131_fastqc.html
+[2020-06-04 01:44:32,022] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 131_fastqc.html
+[2020-06-04 01:44:32,058] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 280_fastqc.html
+[2020-06-04 01:44:32,060] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 280_fastqc.html
+[2020-06-04 01:44:32,103] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 11_fastqc.html
+[2020-06-04 01:44:32,105] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 11_fastqc.html
+[2020-06-04 01:44:32,153] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 170_fastqc.html
+[2020-06-04 01:44:32,155] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 170_fastqc.html
+[2020-06-04 01:44:32,230] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 230_fastqc.html
+[2020-06-04 01:44:32,232] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 230_fastqc.html
+[2020-06-04 01:44:32,277] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 259_fastqc.html
+[2020-06-04 01:44:32,278] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 259_fastqc.html
+[2020-06-04 01:44:32,353] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 19_fastqc.html
+[2020-06-04 01:44:32,355] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 19_fastqc.html
+[2020-06-04 01:44:32,404] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 12_fastqc.html
+[2020-06-04 01:44:32,406] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 12_fastqc.html
+[2020-06-04 01:44:32,454] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 71_fastqc.html
+[2020-06-04 01:44:32,456] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 71_fastqc.html
+[2020-06-04 01:44:32,520] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 90_fastqc.html
+[2020-06-04 01:44:32,522] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 90_fastqc.html
+[2020-06-04 01:44:32,548] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 310_fastqc.html
+[2020-06-04 01:44:32,549] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 310_fastqc.html
+[2020-06-04 01:44:32,586] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 200_fastqc.html
+[2020-06-04 01:44:32,588] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 200_fastqc.html
+[2020-06-04 01:44:32,636] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 99_fastqc.html
+[2020-06-04 01:44:32,638] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 99_fastqc.html
+[2020-06-04 01:44:32,662] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 311_fastqc.html
+[2020-06-04 01:44:32,663] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 311_fastqc.html
+[2020-06-04 01:44:32,685] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 329_fastqc.html
+[2020-06-04 01:44:32,686] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 329_fastqc.html
+[2020-06-04 01:44:32,727] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 37_fastqc.html
+[2020-06-04 01:44:32,729] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 37_fastqc.html
+[2020-06-04 01:44:32,812] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 267_fastqc.html
+[2020-06-04 01:44:32,814] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 267_fastqc.html
+[2020-06-04 01:44:32,857] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 241_fastqc.html
+[2020-06-04 01:44:32,859] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 241_fastqc.html
+[2020-06-04 01:44:32,882] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 317_fastqc.html
+[2020-06-04 01:44:32,883] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 317_fastqc.html
+[2020-06-04 01:44:32,922] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 179_fastqc.html
+[2020-06-04 01:44:32,924] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 179_fastqc.html
+[2020-06-04 01:44:32,949] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 316_fastqc.html
+[2020-06-04 01:44:32,950] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 316_fastqc.html
+[2020-06-04 01:44:32,971] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 313_fastqc.html
+[2020-06-04 01:44:32,972] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 313_fastqc.html
+[2020-06-04 01:44:33,012] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 59_fastqc.html
+[2020-06-04 01:44:33,013] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 59_fastqc.html
+[2020-06-04 01:44:33,039] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 326_fastqc.html
+[2020-06-04 01:44:33,040] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 326_fastqc.html
+[2020-06-04 01:44:33,118] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 256_fastqc.html
+[2020-06-04 01:44:33,120] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 256_fastqc.html
+[2020-06-04 01:44:33,161] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 209_fastqc.html
+[2020-06-04 01:44:33,163] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 209_fastqc.html
+[2020-06-04 01:44:33,240] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 180_fastqc.html
+[2020-06-04 01:44:33,242] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 180_fastqc.html
+[2020-06-04 01:44:33,292] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 92_fastqc.html
+[2020-06-04 01:44:33,294] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 92_fastqc.html
+[2020-06-04 01:44:33,347] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 184_fastqc.html
+[2020-06-04 01:44:33,349] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 184_fastqc.html
+[2020-06-04 01:44:33,392] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 175_fastqc.html
+[2020-06-04 01:44:33,393] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 175_fastqc.html
+[2020-06-04 01:44:33,457] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 47_fastqc.html
+[2020-06-04 01:44:33,459] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 47_fastqc.html
+[2020-06-04 01:44:33,486] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 298_fastqc.html
+[2020-06-04 01:44:33,487] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 298_fastqc.html
+[2020-06-04 01:44:33,531] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 4_fastqc.html
+[2020-06-04 01:44:33,533] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 4_fastqc.html
+[2020-06-04 01:44:33,628] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 97_fastqc.html
+[2020-06-04 01:44:33,630] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 97_fastqc.html
+[2020-06-04 01:44:33,679] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 163_fastqc.html
+[2020-06-04 01:44:33,681] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 163_fastqc.html
+[2020-06-04 01:44:33,757] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 245_fastqc.html
+[2020-06-04 01:44:33,759] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 245_fastqc.html
+[2020-06-04 01:44:33,808] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 214_fastqc.html
+[2020-06-04 01:44:33,810] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 214_fastqc.html
+[2020-06-04 01:44:33,855] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 146_fastqc.html
+[2020-06-04 01:44:33,857] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 146_fastqc.html
+[2020-06-04 01:44:33,906] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 213_fastqc.html
+[2020-06-04 01:44:33,907] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 213_fastqc.html
+[2020-06-04 01:44:33,978] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 187_fastqc.html
+[2020-06-04 01:44:33,980] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 187_fastqc.html
+[2020-06-04 01:44:34,030] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 167_fastqc.html
+[2020-06-04 01:44:34,032] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 167_fastqc.html
+[2020-06-04 01:44:34,092] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 44_fastqc.html
+[2020-06-04 01:44:34,093] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 44_fastqc.html
+[2020-06-04 01:44:34,144] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 29_fastqc.html
+[2020-06-04 01:44:34,146] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 29_fastqc.html
+[2020-06-04 01:44:34,198] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 110_fastqc.html
+[2020-06-04 01:44:34,200] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 110_fastqc.html
+[2020-06-04 01:44:34,245] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 222_fastqc.html
+[2020-06-04 01:44:34,247] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 222_fastqc.html
+[2020-06-04 01:44:34,333] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 265_fastqc.html
+[2020-06-04 01:44:34,335] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 265_fastqc.html
+[2020-06-04 01:44:34,387] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 34_fastqc.html
+[2020-06-04 01:44:34,389] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 34_fastqc.html
+[2020-06-04 01:44:34,438] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 35_fastqc.html
+[2020-06-04 01:44:34,439] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 35_fastqc.html
+[2020-06-04 01:44:34,486] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 78_fastqc.html
+[2020-06-04 01:44:34,488] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 78_fastqc.html
+[2020-06-04 01:44:34,584] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 249_fastqc.html
+[2020-06-04 01:44:34,586] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 249_fastqc.html
+[2020-06-04 01:44:34,628] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 243_fastqc.html
+[2020-06-04 01:44:34,630] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 243_fastqc.html
+[2020-06-04 01:44:34,705] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 190_fastqc.html
+[2020-06-04 01:44:34,707] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 190_fastqc.html
+[2020-06-04 01:44:34,758] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 237_fastqc.html
+[2020-06-04 01:44:34,760] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 237_fastqc.html
+[2020-06-04 01:44:34,811] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 189_fastqc.html
+[2020-06-04 01:44:34,813] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 189_fastqc.html
+[2020-06-04 01:44:34,859] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 6_fastqc.html
+[2020-06-04 01:44:34,861] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 6_fastqc.html
+[2020-06-04 01:44:34,943] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 33_fastqc.html
+[2020-06-04 01:44:34,946] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 33_fastqc.html
+[2020-06-04 01:44:34,989] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 216_fastqc.html
+[2020-06-04 01:44:34,990] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 216_fastqc.html
+[2020-06-04 01:44:35,057] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 28_fastqc.html
+[2020-06-04 01:44:35,059] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 28_fastqc.html
+[2020-06-04 01:44:35,083] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 299_fastqc.html
+[2020-06-04 01:44:35,084] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 299_fastqc.html
+[2020-06-04 01:44:35,126] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 178_fastqc.html
+[2020-06-04 01:44:35,128] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 178_fastqc.html
+[2020-06-04 01:44:35,224] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 140_fastqc.html
+[2020-06-04 01:44:35,226] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 140_fastqc.html
+[2020-06-04 01:44:35,255] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 142_fastqc.html
+[2020-06-04 01:44:35,256] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 142_fastqc.html
+[2020-06-04 01:44:35,295] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 93_fastqc.html
+[2020-06-04 01:44:35,296] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 93_fastqc.html
+[2020-06-04 01:44:35,323] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 94_fastqc.html
+[2020-06-04 01:44:35,324] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 94_fastqc.html
+[2020-06-04 01:44:35,367] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 122_fastqc.html
+[2020-06-04 01:44:35,369] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 122_fastqc.html
+[2020-06-04 01:44:35,401] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 231_fastqc.html
+[2020-06-04 01:44:35,402] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 231_fastqc.html
+[2020-06-04 01:44:35,448] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 257_fastqc.html
+[2020-06-04 01:44:35,450] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 257_fastqc.html
+[2020-06-04 01:44:35,529] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 197_fastqc.html
+[2020-06-04 01:44:35,531] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 197_fastqc.html
+[2020-06-04 01:44:35,579] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 196_fastqc.html
+[2020-06-04 01:44:35,581] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 196_fastqc.html
+[2020-06-04 01:44:35,680] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 236_fastqc.html
+[2020-06-04 01:44:35,681] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 236_fastqc.html
+[2020-06-04 01:44:35,707] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 269_fastqc.html
+[2020-06-04 01:44:35,708] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 269_fastqc.html
+[2020-06-04 01:44:35,744] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 18_fastqc.html
+[2020-06-04 01:44:35,746] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 18_fastqc.html
+[2020-06-04 01:44:35,812] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 250_fastqc.html
+[2020-06-04 01:44:35,813] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 250_fastqc.html
+[2020-06-04 01:44:35,841] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 324_fastqc.html
+[2020-06-04 01:44:35,842] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 324_fastqc.html
+[2020-06-04 01:44:35,866] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 291_fastqc.html
+[2020-06-04 01:44:35,867] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 291_fastqc.html
+[2020-06-04 01:44:35,909] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 272_fastqc.html
+[2020-06-04 01:44:35,911] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 272_fastqc.html
+[2020-06-04 01:44:35,944] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 153_fastqc.html
+[2020-06-04 01:44:35,945] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 153_fastqc.html
+[2020-06-04 01:44:35,990] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 233_fastqc.html
+[2020-06-04 01:44:35,992] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 233_fastqc.html
+[2020-06-04 01:44:36,038] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 263_fastqc.html
+[2020-06-04 01:44:36,040] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 263_fastqc.html
+[2020-06-04 01:44:36,065] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 306_fastqc.html
+[2020-06-04 01:44:36,066] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 306_fastqc.html
+[2020-06-04 01:44:36,105] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 120_fastqc.html
+[2020-06-04 01:44:36,107] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 120_fastqc.html
+[2020-06-04 01:44:36,147] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 31_fastqc.html
+[2020-06-04 01:44:36,150] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 31_fastqc.html
+[2020-06-04 01:44:36,196] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 15_fastqc.html
+[2020-06-04 01:44:36,198] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 15_fastqc.html
+[2020-06-04 01:44:36,262] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 45_fastqc.html
+[2020-06-04 01:44:36,263] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 45_fastqc.html
+[2020-06-04 01:44:36,302] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 225_fastqc.html
+[2020-06-04 01:44:36,304] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 225_fastqc.html
+[2020-06-04 01:44:36,361] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 119_fastqc.html
+[2020-06-04 01:44:36,363] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 119_fastqc.html
+[2020-06-04 01:44:36,410] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 283_fastqc.html
+[2020-06-04 01:44:36,412] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 283_fastqc.html
+[2020-06-04 01:44:36,457] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 282_fastqc.html
+[2020-06-04 01:44:36,459] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 282_fastqc.html
+[2020-06-04 01:44:36,550] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 289_fastqc.html
+[2020-06-04 01:44:36,552] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 289_fastqc.html
+[2020-06-04 01:44:36,600] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 275_fastqc.html
+[2020-06-04 01:44:36,602] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 275_fastqc.html
+[2020-06-04 01:44:36,680] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 8_fastqc.html
+[2020-06-04 01:44:36,682] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 8_fastqc.html
+[2020-06-04 01:44:36,709] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 325_fastqc.html
+[2020-06-04 01:44:36,710] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 325_fastqc.html
+[2020-06-04 01:44:36,755] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 229_fastqc.html
+[2020-06-04 01:44:36,757] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 229_fastqc.html
+[2020-06-04 01:44:36,804] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 159_fastqc.html
+[2020-06-04 01:44:36,807] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 159_fastqc.html
+[2020-06-04 01:44:36,855] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 262_fastqc.html
+[2020-06-04 01:44:36,857] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 262_fastqc.html
+[2020-06-04 01:44:36,959] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 150_fastqc.html
+[2020-06-04 01:44:36,961] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 150_fastqc.html
+[2020-06-04 01:44:37,076] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 199_fastqc.html
+[2020-06-04 01:44:37,078] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 199_fastqc.html
+[2020-06-04 01:44:37,128] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 104_fastqc.html
+[2020-06-04 01:44:37,130] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 104_fastqc.html
+[2020-06-04 01:44:37,210] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 74_fastqc.html
+[2020-06-04 01:44:37,212] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 74_fastqc.html
+[2020-06-04 01:44:37,256] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 206_fastqc.html
+[2020-06-04 01:44:37,258] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 206_fastqc.html
+[2020-06-04 01:44:37,314] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 105_fastqc.html
+[2020-06-04 01:44:37,316] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 105_fastqc.html
+[2020-06-04 01:44:37,411] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 273_fastqc.html
+[2020-06-04 01:44:37,413] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 273_fastqc.html
+[2020-06-04 01:44:37,458] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 125_fastqc.html
+[2020-06-04 01:44:37,460] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 125_fastqc.html
+[2020-06-04 01:44:37,552] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 208_fastqc.html
+[2020-06-04 01:44:37,554] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 208_fastqc.html
+[2020-06-04 01:44:37,598] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 278_fastqc.html
+[2020-06-04 01:44:37,600] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 278_fastqc.html
+[2020-06-04 01:44:37,648] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 53_fastqc.html
+[2020-06-04 01:44:37,650] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 53_fastqc.html
+[2020-06-04 01:44:37,698] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 16_fastqc.html
+[2020-06-04 01:44:37,700] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 16_fastqc.html
+[2020-06-04 01:44:37,745] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 85_fastqc.html
+[2020-06-04 01:44:37,747] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 85_fastqc.html
+[2020-06-04 01:44:37,772] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 315_fastqc.html
+[2020-06-04 01:44:37,773] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 315_fastqc.html
+[2020-06-04 01:44:37,857] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 221_fastqc.html
+[2020-06-04 01:44:37,858] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 221_fastqc.html
+[2020-06-04 01:44:37,908] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 106_fastqc.html
+[2020-06-04 01:44:37,910] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 106_fastqc.html
+[2020-06-04 01:44:38,000] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 133_fastqc.html
+[2020-06-04 01:44:38,002] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 133_fastqc.html
+[2020-06-04 01:44:38,100] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 279_fastqc.html
+[2020-06-04 01:44:38,102] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 279_fastqc.html
+[2020-06-04 01:44:38,146] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 212_fastqc.html
+[2020-06-04 01:44:38,148] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 212_fastqc.html
+[2020-06-04 01:44:38,175] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 321_fastqc.html
+[2020-06-04 01:44:38,177] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 321_fastqc.html
+[2020-06-04 01:44:38,199] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 330_fastqc.html
+[2020-06-04 01:44:38,200] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 330_fastqc.html
+[2020-06-04 01:44:38,240] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 101_fastqc.html
+[2020-06-04 01:44:38,242] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 101_fastqc.html
+[2020-06-04 01:44:38,318] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 158_fastqc.html
+[2020-06-04 01:44:38,320] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 158_fastqc.html
+[2020-06-04 01:44:38,367] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 123_fastqc.html
+[2020-06-04 01:44:38,369] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 123_fastqc.html
+[2020-06-04 01:44:38,423] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 201_fastqc.html
+[2020-06-04 01:44:38,425] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 201_fastqc.html
+[2020-06-04 01:44:38,452] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 323_fastqc.html
+[2020-06-04 01:44:38,453] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 323_fastqc.html
+[2020-06-04 01:44:38,475] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 307_fastqc.html
+[2020-06-04 01:44:38,477] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 307_fastqc.html
+[2020-06-04 01:44:38,521] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 41_fastqc.html
+[2020-06-04 01:44:38,523] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 41_fastqc.html
+[2020-06-04 01:44:38,617] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 107_fastqc.html
+[2020-06-04 01:44:38,620] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 107_fastqc.html
+[2020-06-04 01:44:38,667] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 50_fastqc.html
+[2020-06-04 01:44:38,668] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 50_fastqc.html
+[2020-06-04 01:44:38,719] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 228_fastqc.html
+[2020-06-04 01:44:38,721] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 228_fastqc.html
+[2020-06-04 01:44:38,777] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 96_fastqc.html
+[2020-06-04 01:44:38,779] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 96_fastqc.html
+[2020-06-04 01:44:38,819] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 242_fastqc.html
+[2020-06-04 01:44:38,821] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 242_fastqc.html
+[2020-06-04 01:44:38,862] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 264_fastqc.html
+[2020-06-04 01:44:38,864] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 264_fastqc.html
+[2020-06-04 01:44:38,908] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 68_fastqc.html
+[2020-06-04 01:44:38,910] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 68_fastqc.html
+[2020-06-04 01:44:38,963] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 266_fastqc.html
+[2020-06-04 01:44:38,965] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 266_fastqc.html
+[2020-06-04 01:44:39,006] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 49_fastqc.html
+[2020-06-04 01:44:39,008] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 49_fastqc.html
+[2020-06-04 01:44:39,070] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 162_fastqc.html
+[2020-06-04 01:44:39,072] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 162_fastqc.html
+[2020-06-04 01:44:39,156] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 83_fastqc.html
+[2020-06-04 01:44:39,158] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 83_fastqc.html
+[2020-06-04 01:44:39,203] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 36_fastqc.html
+[2020-06-04 01:44:39,205] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 36_fastqc.html
+[2020-06-04 01:44:39,298] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 57_fastqc.html
+[2020-06-04 01:44:39,300] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 57_fastqc.html
+[2020-06-04 01:44:39,346] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 134_fastqc.html
+[2020-06-04 01:44:39,348] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 134_fastqc.html
+[2020-06-04 01:44:39,418] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 51_fastqc.html
+[2020-06-04 01:44:39,420] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 51_fastqc.html
+[2020-06-04 01:44:39,466] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 171_fastqc.html
+[2020-06-04 01:44:39,468] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 171_fastqc.html
+[2020-06-04 01:44:39,523] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 271_fastqc.html
+[2020-06-04 01:44:39,525] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 271_fastqc.html
+[2020-06-04 01:44:39,618] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 55_fastqc.html
+[2020-06-04 01:44:39,621] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 55_fastqc.html
+[2020-06-04 01:44:39,666] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 186_fastqc.html
+[2020-06-04 01:44:39,667] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 186_fastqc.html
+[2020-06-04 01:44:39,764] multiqc                                            [DEBUG  ]  File ignored by hicexplorer because it exceeded search pattern filesize limit: 20_fastqc.html
+[2020-06-04 01:44:39,766] multiqc                                            [DEBUG  ]  File ignored by longranger/invocation because it exceeded search pattern filesize limit: 20_fastqc.html
+[2020-06-04 01:44:40,044] multiqc.plots.bargraph                             [DEBUG  ]  Using matplotlib version 3.2.1
+[2020-06-04 01:44:40,044] multiqc.plots.linegraph                            [DEBUG  ]  Using matplotlib version 3.2.1
+[2020-06-04 01:44:40,045] multiqc                                            [DEBUG  ]  No samples found: custom_content
+[2020-06-04 01:44:40,048] multiqc                                            [DEBUG  ]  No samples found: conpair
+[2020-06-04 01:44:40,050] multiqc                                            [DEBUG  ]  No samples found: peddy
+[2020-06-04 01:44:40,053] multiqc                                            [DEBUG  ]  No samples found: somalier
+[2020-06-04 01:44:40,056] multiqc                                            [DEBUG  ]  No samples found: methylQA
+[2020-06-04 01:44:40,060] multiqc                                            [DEBUG  ]  No samples found: mosdepth
+[2020-06-04 01:44:40,062] multiqc                                            [DEBUG  ]  No samples found: phantompeakqualtools
+[2020-06-04 01:44:40,065] multiqc                                            [DEBUG  ]  No samples found: qualimap
+[2020-06-04 01:44:40,067] multiqc                                            [DEBUG  ]  No samples found: preseq
+[2020-06-04 01:44:40,070] multiqc                                            [DEBUG  ]  No samples found: quast
+[2020-06-04 01:44:40,073] multiqc                                            [DEBUG  ]  No samples found: qorts
+[2020-06-04 01:44:40,075] multiqc                                            [DEBUG  ]  No samples found: rna_seqc
+[2020-06-04 01:44:40,078] multiqc                                            [DEBUG  ]  No samples found: rockhopper
+[2020-06-04 01:44:40,081] multiqc                                            [DEBUG  ]  No samples found: rsem
+[2020-06-04 01:44:40,085] multiqc                                            [DEBUG  ]  No samples found: rseqc
+[2020-06-04 01:44:40,088] multiqc                                            [DEBUG  ]  No samples found: busco
+[2020-06-04 01:44:40,090] multiqc                                            [DEBUG  ]  No samples found: goleft_indexcov
+[2020-06-04 01:44:40,093] multiqc                                            [DEBUG  ]  No samples found: disambiguate
+[2020-06-04 01:44:40,096] multiqc                                            [DEBUG  ]  No samples found: supernova
+[2020-06-04 01:44:40,101] multiqc                                            [DEBUG  ]  No samples found: deeptools
+[2020-06-04 01:44:40,104] multiqc                                            [DEBUG  ]  No samples found: sargasso
+[2020-06-04 01:44:40,108] multiqc                                            [DEBUG  ]  No samples found: verifybamid
+[2020-06-04 01:44:40,111] multiqc                                            [DEBUG  ]  No samples found: mirtrace
+[2020-06-04 01:44:40,114] multiqc                                            [DEBUG  ]  No samples found: happy
+[2020-06-04 01:44:40,117] multiqc                                            [DEBUG  ]  No samples found: mirtop
+[2020-06-04 01:44:40,120] multiqc                                            [DEBUG  ]  No samples found: homer
+[2020-06-04 01:44:40,122] multiqc                                            [DEBUG  ]  No samples found: macs2
+[2020-06-04 01:44:40,125] multiqc                                            [DEBUG  ]  No samples found: theta2
+[2020-06-04 01:44:40,127] multiqc                                            [DEBUG  ]  No samples found: snpeff
+[2020-06-04 01:44:40,131] multiqc                                            [DEBUG  ]  No samples found: gatk
+[2020-06-04 01:44:40,133] multiqc                                            [DEBUG  ]  No samples found: htseq
+[2020-06-04 01:44:40,136] multiqc                                            [DEBUG  ]  No samples found: bcftools
+[2020-06-04 01:44:40,139] multiqc                                            [DEBUG  ]  No samples found: featureCounts
+[2020-06-04 01:44:40,142] multiqc                                            [DEBUG  ]  No samples found: fgbio
+[2020-06-04 01:44:40,147] multiqc                                            [DEBUG  ]  No samples found: dragen
+[2020-06-04 01:44:40,150] multiqc                                            [DEBUG  ]  No samples found: dedup
+[2020-06-04 01:44:40,152] multiqc                                            [DEBUG  ]  No samples found: damageprofiler
+[2020-06-04 01:44:40,161] multiqc                                            [DEBUG  ]  No samples found: biobambam2
+[2020-06-04 01:44:40,165] multiqc                                            [DEBUG  ]  No samples found: mtnucratio
+[2020-06-04 01:44:40,168] multiqc                                            [DEBUG  ]  No samples found: picard
+[2020-06-04 01:44:40,171] multiqc                                            [DEBUG  ]  No samples found: prokka
+[2020-06-04 01:44:40,174] multiqc                                            [DEBUG  ]  No samples found: samblaster
+[2020-06-04 01:44:40,178] multiqc                                            [DEBUG  ]  No samples found: samtools
+[2020-06-04 01:44:40,180] multiqc                                            [DEBUG  ]  No samples found: sexdeterrmine
+[2020-06-04 01:44:40,183] multiqc                                            [DEBUG  ]  No samples found: bamtools
+[2020-06-04 01:44:40,185] multiqc                                            [DEBUG  ]  No samples found: jellyfish
+[2020-06-04 01:44:40,189] multiqc                                            [DEBUG  ]  No samples found: vcftools
+[2020-06-04 01:44:40,192] multiqc                                            [DEBUG  ]  No samples found: longranger
+[2020-06-04 01:44:40,194] multiqc                                            [DEBUG  ]  No samples found: stacks
+[2020-06-04 01:44:40,197] multiqc                                            [DEBUG  ]  No samples found: varscan2
+[2020-06-04 01:44:40,202] multiqc                                            [DEBUG  ]  No samples found: bbmap
+[2020-06-04 01:44:40,205] multiqc                                            [DEBUG  ]  No samples found: bismark
+[2020-06-04 01:44:40,209] multiqc                                            [DEBUG  ]  No samples found: biscuit
+[2020-06-04 01:44:40,212] multiqc                                            [DEBUG  ]  No samples found: hicexplorer
+[2020-06-04 01:44:40,215] multiqc                                            [DEBUG  ]  No samples found: hicup
+[2020-06-04 01:44:40,218] multiqc                                            [DEBUG  ]  No samples found: hicpro
+[2020-06-04 01:44:40,221] multiqc                                            [DEBUG  ]  No samples found: salmon
+[2020-06-04 01:44:40,223] multiqc                                            [DEBUG  ]  No samples found: kallisto
+[2020-06-04 01:44:40,226] multiqc                                            [DEBUG  ]  No samples found: slamdunk
+[2020-06-04 01:44:40,229] multiqc                                            [DEBUG  ]  No samples found: star
+[2020-06-04 01:44:40,232] multiqc                                            [DEBUG  ]  No samples found: hisat2
+[2020-06-04 01:44:40,234] multiqc                                            [DEBUG  ]  No samples found: tophat
+[2020-06-04 01:44:40,237] multiqc                                            [DEBUG  ]  No samples found: bowtie2
+[2020-06-04 01:44:40,239] multiqc                                            [DEBUG  ]  No samples found: bowtie1
+[2020-06-04 01:44:40,242] multiqc                                            [DEBUG  ]  No samples found: snpsplit
+[2020-06-04 01:44:40,244] multiqc                                            [DEBUG  ]  No samples found: kat
+[2020-06-04 01:44:40,247] multiqc                                            [DEBUG  ]  No samples found: leehom
+[2020-06-04 01:44:40,249] multiqc                                            [DEBUG  ]  No samples found: adapterRemoval
+[2020-06-04 01:44:40,252] multiqc                                            [DEBUG  ]  No samples found: clipandmerge
+[2020-06-04 01:44:40,254] multiqc                                            [DEBUG  ]  No samples found: cutadapt
+[2020-06-04 01:44:40,256] multiqc                                            [DEBUG  ]  No samples found: flexbar
+[2020-06-04 01:44:40,259] multiqc                                            [DEBUG  ]  No samples found: kaiju
+[2020-06-04 01:44:40,261] multiqc                                            [DEBUG  ]  No samples found: kraken
+[2020-06-04 01:44:40,263] multiqc                                            [DEBUG  ]  No samples found: malt
+[2020-06-04 01:44:40,266] multiqc                                            [DEBUG  ]  No samples found: trimmomatic
+[2020-06-04 01:44:40,268] multiqc                                            [DEBUG  ]  No samples found: sickle
+[2020-06-04 01:44:40,270] multiqc                                            [DEBUG  ]  No samples found: skewer
+[2020-06-04 01:44:40,273] multiqc                                            [DEBUG  ]  No samples found: sortmerna
+[2020-06-04 01:44:40,275] multiqc                                            [DEBUG  ]  No samples found: biobloomtools
+[2020-06-04 01:44:40,278] multiqc                                            [DEBUG  ]  No samples found: fastq_screen
+[2020-06-04 01:44:40,280] multiqc                                            [DEBUG  ]  No samples found: afterqc
+[2020-06-04 01:44:40,282] multiqc                                            [DEBUG  ]  No samples found: fastp
+[2020-06-04 01:45:01,099] multiqc.modules.fastqc.fastqc                      [INFO   ]  Found 329 reports
+[2020-06-04 01:45:16,422] multiqc                                            [DEBUG  ]  No samples found: pycoqc
+[2020-06-04 01:45:16,426] multiqc                                            [DEBUG  ]  No samples found: minionqc
+[2020-06-04 01:45:16,429] multiqc                                            [DEBUG  ]  No samples found: multivcfanalyzer
+[2020-06-04 01:45:16,432] multiqc                                            [DEBUG  ]  No samples found: clusterflow
+[2020-06-04 01:45:16,435] multiqc                                            [DEBUG  ]  No samples found: bcl2fastq
+[2020-06-04 01:45:16,437] multiqc                                            [DEBUG  ]  No samples found: interop
+[2020-06-04 01:45:16,440] multiqc                                            [DEBUG  ]  No samples found: ivar
+[2020-06-04 01:45:16,442] multiqc                                            [DEBUG  ]  No samples found: flash
+[2020-06-04 01:45:16,444] multiqc                                            [DEBUG  ]  No samples found: seqyclean
+[2020-06-04 01:45:16,730] multiqc                                            [INFO   ]  Compressing plot data
+[2020-06-04 01:45:16,939] multiqc                                            [INFO   ]  Report      : multiqc_report.html
+[2020-06-04 01:45:16,940] multiqc                                            [INFO   ]  Data        : multiqc_data
+[2020-06-04 01:45:16,940] multiqc                                            [DEBUG  ]  Moving data file from '/tmp/tmpr06661kg/multiqc_data' to '/media/vincent/Data/panax/2_trimmed/pooled_sample/multiqc_data'
+[2020-06-04 01:45:17,093] multiqc                                            [INFO   ]  MultiQC complete
