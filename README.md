@@ -1,7 +1,7 @@
 
 <p align="center">
 
-<img width="460" height="300" src="https://github.com/vincentmanz/Ginseng/blob/main/image/S%C3%A2m%20Ng%E1%BB%8Dc%20Linh.jpg?raw=true">
+<img width="920" height="600" src="https://github.com/vincentmanz/Ginseng/blob/main/image/S%C3%A2m%20Ng%E1%BB%8Dc%20Linh.jpg?raw=true">
 
 </p>
 
