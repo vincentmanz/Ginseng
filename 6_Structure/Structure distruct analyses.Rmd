@@ -1,0 +1,77 @@
+---
+title: "PCA pipeline"
+description: |
+  PCA analyses for "Target capture reveals complex origin of Vietnamese ginseng"
+author:
+  - name: Vincent Manzanilla 
+    url: https://github.com/vincentmanz/
+    affiliation: Postdoc at BaseClear/ Analyst at Data.Labs
+date: "`r Sys.Date()`"
+output:
+  distill::distill_article:
+    toc: true
+    toc_depth: 3
+editor_options: 
+  markdown: 
+    wrap: 200
+  chunk_output_type: console
+---
+
+# VCF to STRUCTURE file convertion
+
+
+Open PGDSpider at : http://www.cmpg.unibe.ch/software/PGDSpider/#Introduction
+
+Load the vcf file and add the populations names: sample.id-Population name.pgdspider.tsv
+
+output: deepvariant.cohort_filtered.str
+
+```{bash}
+#!/bin/bash
+
+MAIN_DIR=~/Project/Ginseng/4_Structure/0_analyses
+INPUT=~/Project/Ginseng/4_Structure/0_analyses/deepvariant.cohort_filtered_650.str
+MAINP=~/Project/Ginseng/4_Structure/0_analyses/mainparams
+EXP=~/Project/Ginseng/4_Structure/0_analyses/extraparams
+REP=3
+
+for i in {1..8}
+do
+
+(cd $MAIN_DIR
+mkdir -p DV_MD_"$i"."$REP"
+cd DV_MD_"$i"."$REP"
+~/soft/structure_linux_console/structure -i $INPUT -o DV_MD_"$i"."$REP" -m $MAINP -e $EXP -K $i > run_"$i"."$REP".log) &
+
+done;
+```
+
+# Structure Harvester
+
+ZIP all of the results files in your folder into one zip archive. If you are using Winzip, choose "legacy compression" to ensure the Harvester can expand your archive.
+
+Click on the "Choose File" button to the left (it may be labeled "Browse" by some browers,) and select your archive.
+
+Click "Harvest!"
+
+http://taylor0.biology.ucla.edu/structureHarvester/
+
+
+```{bash}
+mkdir -p ../1_harvester
+for i in $(find ./ -name "*_f"); do cp $i ../1_harvester/; done
+
+```
+
+
+# distruct
+
+
+
+```{bash}
+
+
+./distructLinux1.1 -d drawparams_2.1_indivs
+
+```
+

@@ -1,0 +1,15 @@
+#define MAXPOPS 1
+#define BURNIN 100000
+#define NUMREPS 1000000
+#define INFILE ../DV_MD_files/deepvariant.cohort_filtered.str
+#define OUTFILE DV_MD_out_1.1
+#define NUMINDS 282
+#define NUMLOCI 667
+#define PLOIDY 2
+#define MISSING -9
+#define LABEL 1
+#define POPDATA 1
+#define POPFLAG 0
+#define PHENOTYPE 0
+#define MARKERNAMES 1
+#define EXTRACOLS 0

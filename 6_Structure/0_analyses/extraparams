@@ -1,0 +1,5 @@
+#define NOADMIX 0
+#define LOCPRIOR 1
+#define INFERALPHA 1
+#define LOCISPOP 1
+#define COMPUTEPROB 1
