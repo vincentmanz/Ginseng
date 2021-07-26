@@ -1,5 +1,9 @@
 
-![panax](https://github.com/vincentmanz/Ginseng/blob/main/image/1047232585901b1.jpg?raw=true)
+<p align="center">
+
+<img width="460" height="300" src="https://github.com/vincentmanz/Ginseng/blob/main/image/1047232585901b1.jpg?raw=true">
+
+</p>
 
 # Target capture reveals the complex origin of Vietnamese ginseng (Panax vietnamensis)
 
@@ -25,3 +29,7 @@ Agricultural Sciences, 10 Duc Thang, Bac Tu Liem, Hanoi, 10000, Vietnam
 
 \*Corresponding authors: Hien Thi Thu LE (<hienlethu@igr.ac.vn>) and
 Vincent MANZANILLA (<vincent.manzanilla@gmail.com>)
+
+# Abstract
+
+# Figures

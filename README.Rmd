@@ -2,7 +2,10 @@
 title: ""
 output: github_document
 ---
-![panax](https://github.com/vincentmanz/Ginseng/blob/main/image/1047232585901b1.jpg?raw=true)
+<p align="center">
+<img width="460" height="300" src="https://github.com/vincentmanz/Ginseng/blob/main/image/1047232585901b1.jpg?raw=true">
+</p>
+
 
 # Target capture reveals the complex origin of Vietnamese ginseng (Panax vietnamensis)
 
@@ -23,7 +26,10 @@ Hien Thi Thu LE1,2\*, Linh Nhat NGUYEN1, Hang Le Bich PHAM1, Hao Thi My LE3, Toa
 
 
 
+# Abstract
 
+
+# Figures
 
 
 
