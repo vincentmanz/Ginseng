@@ -1,0 +1,172 @@
+---
+title: "QC variant pipeline"
+description: |
+  PCA analyses for "Target capture reveals complex origin of Vietnamese ginseng"
+author:
+  - name: Vincent Manzanilla 
+    url: https://github.com/vincentmanz/
+    affiliation: Postdoc at BaseClear/ Analyst at Data.Labs
+date: "`r Sys.Date()`"
+output:
+  distill::distill_article:
+    toc: true
+    toc_depth: 3
+editor_options: 
+  markdown: 
+    wrap: 200
+  chunk_output_type: console
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Mapping
+
+```{bash}
+ffor i in $(cat ../../2_trimmed/111_283_287.list); \
+do bwa mem  -t 64 Panax_supercontig1.fa  ../../2_trimmed/"$i".*_R1_paired.fastq.gz ../../2_trimmed/"$i".*_R2_paired.fastq.gz |  samtools view -bS -@ 64 --reference Panax_supercontig1.fa  - | samtools sort -@ 64  -o bam_files/"$i".bam;  \
+samtools index -c -@ 64 bam_files/"$i".bam; \
+bwa mem  -t 64 Panax_supercontig1.fa  ../../2_trimmed/"$i".*_unpaired.fastq.gz |  samtools view -bS -@ 64 --reference Panax_supercontig1.fa - | samtools sort -@ 64  -o bam_files/"$i"_unpaired.bam ;  \
+samtools index -c -@ 64 bam_files/"$i"_unpaired.bam; \
+samtools merge -@ 64 --reference Panax_supercontig1.fa bam_files/"$i"_merge.bam bam_files/"$i".bam bam_files/"$i"_unpaired.bam ; done
+rm bam_files/"$i"_unpaired.bam/"$i".bam 
+```
+
+
+# Coverage stats
+
+```{bash Coverage stats}
+
+cd bam_files/
+
+for i in $(ls *_merge.bam) ; do bedtools coverage -a ../coverage/Panax_supercontig1.bed -b $i  > ../coverage/heatmap/Data/"$i.mean-coverage-marker.txt" ; done
+for i in $(ls *_merge.bam) ; do bedtools coverage -hist -b "$i" -a ../coverage/Panax_supercontig1.bed | grep ^all > ../coverage/coverage_graph/Data/"$i".hist.all.txt ; done
+
+```
+
+# Mark duplicates
+After mapping, mark duplicate, sort and index bam files.
+
+```{bash Mark duplicates}
+for i in $(ls *_merge.bam); \
+do J=$(echo $i | sed 's/_merge.bam//'); \
+java -jar ~/soft/picard/build/libs/picard.jar MarkDuplicates I=$i  O="../mark_duplicate/"$J"_marked_dup.bam"  M="../mark_duplicate/"$J"_marked_dup_metrics.txt" REFERENCE_SEQUENCE=../Panax_supercontig1.fa; \
+samtools sort -@ 64 -o "../bam_sorted_indexed/"$J"_MD_sorted.bam" ../mark_duplicate/"$J"_marked_dup.bam; \
+samtools index  "../bam_sorted_indexed/"$J"_MD_sorted.bam";  done 
+```
+
+
+# Deepvariant
+
+```{bash DeepVariant}
+OUTPUT_DIR="${PWD}/DV-output"
+mkdir -p "${OUTPUT_DIR}"
+
+BIN_VERSION="1.1.0"
+CAPTURE_BED=Panax_supercontig_317.bed;
+
+
+declare -a samples=(1 10 100 101 102 103 104 105 106 107 108 11 110 111 112 113 114 115 116 117 118 119 12 120 126 127 129 13 139 14 140 141 142 143 144 145 146 147 148 149 15 150 152 153 155 157 158 159 16 160 161 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179 18 180 181 182 183 184 185 186 187 188 189 19 190 191 192 193 194 195 196 197 198 199 20 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215 216 217 218 219 22 220 221 222 223 224 225 226 227 228 229 23 230 232 233 235 236 238 24 241 242 243 244 245 246 247 248 249 250 251 252 253 254 255 256 257 258 259 260 261 262 264 265 266 267 268 269 270 271 272 273 274 275 278 280 283 284 285 286 287 289 290 291 292 293 294 295 296 297 298 299 300 301 302 303 304 305 307 308 309 310 311 312 313 314 315 316 317 318 319 320 321 322 323 324 325 326 327 328 329 33 330 34 35 36 37 38 4 40 41 42 43 44 45 47 48 49 50 51 52 53 54 55 56 57 58 59 6 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 8 80 81 82 83 84 85 86 87 88 89 9 90 91 92 93 94 95 96 97 98 99)
+
+for SAMPLE in "${samples[@]}";
+do
+  BAM="${SAMPLE}_marked_dup.bam";
+  OUTPUT_VCF=${SAMPLE}.vcf.gz;
+  OUTPUT_GVCF=${SAMPLE}.g.vcf.gz;
+  echo -e ${BAM};
+time sudo docker run --gpus all \
+  -v "${PWD}":"/data" \
+  google/deepvariant:"${BIN_VERSION}-gpu" \
+  /opt/deepvariant/bin/run_deepvariant \
+  --model_type=WES \
+  --sample_name=${SAMPLE} \
+  --ref="/data/Panax_supercontig1.fa" \
+  --reads="/data/${BAM}" \
+  --output_vcf="/data/${OUTPUT_VCF}" \
+  --output_gvcf="/data/${OUTPUT_GVCF}" \
+  --num_shards=$(nproc); \
+done ;
+
+
+#sudo docker pull quay.io/mlin/glnexus:v1.2.7
+
+VCF=$(ls *.vcf.gz)
+
+time sudo docker run \
+  -v "${PWD}":"/data" \
+  quay.io/mlin/glnexus:v1.2.7 \
+  /usr/local/bin/glnexus_cli \
+  --config DeepVariantWES \
+  #--bed "/data/${CAPTURE_BED}" \
+ /data/1.g.vcf.gz /data/10.g.vcf.gz /data/100.g.vcf.gz /data/101.g.vcf.gz /data/102.g.vcf.gz /data/103.g.vcf.gz /data/104.g.vcf.gz /data/105.g.vcf.gz /data/106.g.vcf.gz /data/107.g.vcf.gz /data/108.g.vcf.gz /data/11.g.vcf.gz /data/110.g.vcf.gz /data/111.g.vcf.gz /data/112.g.vcf.gz /data/113.g.vcf.gz /data/114.g.vcf.gz /data/115.g.vcf.gz /data/116.g.vcf.gz /data/117.g.vcf.gz /data/118.g.vcf.gz /data/119.g.vcf.gz /data/12.g.vcf.gz /data/120.g.vcf.gz /data/126.g.vcf.gz /data/127.g.vcf.gz /data/129.g.vcf.gz /data/13.g.vcf.gz /data/139.g.vcf.gz /data/14.g.vcf.gz /data/140.g.vcf.gz /data/141.g.vcf.gz /data/142.g.vcf.gz /data/143.g.vcf.gz /data/144.g.vcf.gz /data/145.g.vcf.gz /data/146.g.vcf.gz /data/147.g.vcf.gz /data/148.g.vcf.gz /data/149.g.vcf.gz /data/15.g.vcf.gz /data/150.g.vcf.gz /data/152.g.vcf.gz /data/153.g.vcf.gz /data/155.g.vcf.gz /data/157.g.vcf.gz /data/158.g.vcf.gz /data/159.g.vcf.gz /data/16.g.vcf.gz /data/160.g.vcf.gz /data/161.g.vcf.gz /data/162.g.vcf.gz /data/163.g.vcf.gz /data/164.g.vcf.gz /data/165.g.vcf.gz /data/166.g.vcf.gz /data/167.g.vcf.gz /data/168.g.vcf.gz /data/169.g.vcf.gz /data/170.g.vcf.gz /data/171.g.vcf.gz /data/172.g.vcf.gz /data/173.g.vcf.gz /data/174.g.vcf.gz /data/175.g.vcf.gz /data/176.g.vcf.gz /data/177.g.vcf.gz /data/178.g.vcf.gz /data/179.g.vcf.gz /data/18.g.vcf.gz /data/180.g.vcf.gz /data/181.g.vcf.gz /data/182.g.vcf.gz /data/183.g.vcf.gz /data/184.g.vcf.gz /data/185.g.vcf.gz /data/186.g.vcf.gz /data/187.g.vcf.gz /data/188.g.vcf.gz /data/189.g.vcf.gz /data/19.g.vcf.gz /data/190.g.vcf.gz /data/191.g.vcf.gz /data/192.g.vcf.gz /data/193.g.vcf.gz /data/194.g.vcf.gz /data/195.g.vcf.gz /data/196.g.vcf.gz /data/197.g.vcf.gz /data/198.g.vcf.gz /data/199.g.vcf.gz /data/20.g.vcf.gz /data/200.g.vcf.gz /data/201.g.vcf.gz /data/202.g.vcf.gz /data/203.g.vcf.gz /data/204.g.vcf.gz /data/205.g.vcf.gz /data/206.g.vcf.gz /data/207.g.vcf.gz /data/208.g.vcf.gz /data/209.g.vcf.gz /data/210.g.vcf.gz /data/211.g.vcf.gz /data/212.g.vcf.gz /data/213.g.vcf.gz /data/214.g.vcf.gz /data/215.g.vcf.gz /data/216.g.vcf.gz /data/217.g.vcf.gz /data/218.g.vcf.gz /data/219.g.vcf.gz /data/22.g.vcf.gz /data/220.g.vcf.gz /data/221.g.vcf.gz /data/222.g.vcf.gz /data/223.g.vcf.gz /data/224.g.vcf.gz /data/225.g.vcf.gz /data/226.g.vcf.gz /data/227.g.vcf.gz /data/228.g.vcf.gz /data/229.g.vcf.gz /data/23.g.vcf.gz /data/230.g.vcf.gz /data/232.g.vcf.gz /data/233.g.vcf.gz /data/235.g.vcf.gz /data/236.g.vcf.gz /data/238.g.vcf.gz /data/24.g.vcf.gz /data/241.g.vcf.gz /data/242.g.vcf.gz /data/243.g.vcf.gz /data/244.g.vcf.gz /data/245.g.vcf.gz /data/246.g.vcf.gz /data/247.g.vcf.gz /data/248.g.vcf.gz /data/249.g.vcf.gz /data/250.g.vcf.gz /data/251.g.vcf.gz /data/252.g.vcf.gz /data/253.g.vcf.gz /data/254.g.vcf.gz /data/255.g.vcf.gz /data/256.g.vcf.gz /data/257.g.vcf.gz /data/258.g.vcf.gz /data/259.g.vcf.gz /data/260.g.vcf.gz /data/261.g.vcf.gz /data/262.g.vcf.gz /data/264.g.vcf.gz /data/265.g.vcf.gz /data/266.g.vcf.gz /data/267.g.vcf.gz /data/268.g.vcf.gz /data/269.g.vcf.gz /data/270.g.vcf.gz /data/271.g.vcf.gz /data/272.g.vcf.gz /data/273.g.vcf.gz /data/274.g.vcf.gz /data/275.g.vcf.gz /data/278.g.vcf.gz /data/280.g.vcf.gz /data/283.g.vcf.gz /data/284.g.vcf.gz /data/285.g.vcf.gz /data/286.g.vcf.gz /data/287.g.vcf.gz /data/289.g.vcf.gz /data/290.g.vcf.gz /data/291.g.vcf.gz /data/292.g.vcf.gz /data/293.g.vcf.gz /data/294.g.vcf.gz /data/295.g.vcf.gz /data/296.g.vcf.gz /data/297.g.vcf.gz /data/298.g.vcf.gz /data/299.g.vcf.gz /data/300.g.vcf.gz /data/301.g.vcf.gz /data/302.g.vcf.gz /data/303.g.vcf.gz /data/304.g.vcf.gz /data/305.g.vcf.gz /data/307.g.vcf.gz /data/308.g.vcf.gz /data/309.g.vcf.gz /data/310.g.vcf.gz /data/311.g.vcf.gz /data/312.g.vcf.gz /data/313.g.vcf.gz /data/314.g.vcf.gz /data/315.g.vcf.gz /data/316.g.vcf.gz /data/317.g.vcf.gz /data/318.g.vcf.gz /data/319.g.vcf.gz /data/320.g.vcf.gz /data/321.g.vcf.gz /data/322.g.vcf.gz /data/323.g.vcf.gz /data/324.g.vcf.gz /data/325.g.vcf.gz /data/326.g.vcf.gz /data/327.g.vcf.gz /data/328.g.vcf.gz /data/329.g.vcf.gz /data/33.g.vcf.gz /data/330.g.vcf.gz /data/34.g.vcf.gz /data/35.g.vcf.gz /data/36.g.vcf.gz /data/37.g.vcf.gz /data/38.g.vcf.gz /data/4.g.vcf.gz /data/40.g.vcf.gz /data/41.g.vcf.gz /data/42.g.vcf.gz /data/43.g.vcf.gz /data/44.g.vcf.gz /data/45.g.vcf.gz /data/47.g.vcf.gz /data/48.g.vcf.gz /data/49.g.vcf.gz /data/50.g.vcf.gz /data/51.g.vcf.gz /data/52.g.vcf.gz /data/53.g.vcf.gz /data/54.g.vcf.gz /data/55.g.vcf.gz /data/56.g.vcf.gz /data/57.g.vcf.gz /data/58.g.vcf.gz /data/59.g.vcf.gz /data/6.g.vcf.gz /data/60.g.vcf.gz /data/61.g.vcf.gz /data/62.g.vcf.gz /data/63.g.vcf.gz /data/64.g.vcf.gz /data/65.g.vcf.gz /data/66.g.vcf.gz /data/67.g.vcf.gz /data/68.g.vcf.gz /data/69.g.vcf.gz /data/70.g.vcf.gz /data/71.g.vcf.gz /data/72.g.vcf.gz /data/73.g.vcf.gz /data/74.g.vcf.gz /data/75.g.vcf.gz /data/76.g.vcf.gz /data/77.g.vcf.gz /data/78.g.vcf.gz /data/79.g.vcf.gz /data/8.g.vcf.gz /data/80.g.vcf.gz /data/81.g.vcf.gz /data/82.g.vcf.gz /data/83.g.vcf.gz /data/84.g.vcf.gz /data/85.g.vcf.gz /data/86.g.vcf.gz /data/87.g.vcf.gz /data/88.g.vcf.gz /data/89.g.vcf.gz /data/9.g.vcf.gz /data/90.g.vcf.gz /data/91.g.vcf.gz /data/92.g.vcf.gz /data/93.g.vcf.gz /data/94.g.vcf.gz /data/95.g.vcf.gz /data/96.g.vcf.gz /data/97.g.vcf.gz /data/98.g.vcf.gz /data/99.g.vcf.gz \
+  | bcftools view - | bgzip -c > ${PWD}/deepvariant.cohort.vcf.gz
+
+```
+
+
+
+# Filtering variant calling
+
+https://speciationgenomics.github.io/filtering_vcfs/
+
+```{bash}
+
+#Make basic statistics for R 
+mkdir -p ./vcftools
+VCF=2021_deepvariant.cohort.vcf.gz
+OUT=./vcftools/deepvariant.cohort
+#Calculate allele frequency
+vcftools --gzvcf $VCF --freq2 --out $OUT --max-alleles 2
+#mean depth of coverage per individual
+vcftools --gzvcf $VCF --depth --out $OUT
+#mean depth of coverage for each site.
+vcftools --gzvcf $VCF --site-mean-depth --out $OUT
+#Calculate site quality
+vcftools --gzvcf $VCF --site-quality --out $OUT
+#Calculate proportion of missing data per individual
+vcftools --gzvcf $VCF --missing-indv --out $OUT
+#Calculate proportion of missing data per site
+vcftools --gzvcf $VCF --missing-site --out $OUT
+#Calculate heterozygosity and inbreeding coefficient per individual
+vcftools --gzvcf $VCF --het --out $OUT
+
+
+#Filtering the vcf file after the SNP calling
+VCF=../2021_deepvariant.cohort.vcf.gz
+VCF_OUT=deepvariant.cohort_filtered.vcf.gz
+# set filters
+MAF=0.10
+MISS=0.8
+QUAL=30
+MIN_DEPTH=30
+# move to the vcf directory
+cd vcftools
+# perform the filtering with vcftools
+vcftools --gzvcf $VCF \
+--remove-indels --maf $MAF --max-missing $MISS --minQ $QUAL \
+--min-meanDP $MIN_DEPTH \
+--recode --stdout  | gzip -c > \
+$VCF_OUT
+
+mkdir -p ./vcftools
+
+VCF=deepvariant.cohort_filtered.vcf.gz
+OUT=./vcftools/deepvariant.cohort_filtered_out.vcf.gz
+#Calculate allele frequency
+vcftools --gzvcf $VCF --freq2 --out $OUT --max-alleles 2
+#mean depth of coverage per individual
+vcftools --gzvcf $VCF --depth --out $OUT
+#mean depth of coverage for each site.
+vcftools --gzvcf $VCF --site-mean-depth --out $OUT
+#Calculate site quality
+vcftools --gzvcf $VCF --site-quality --out $OUT
+#Calculate proportion of missing data per individual
+vcftools --gzvcf $VCF --missing-indv --out $OUT
+#Calculate proportion of missing data per site
+vcftools --gzvcf $VCF --missing-site --out $OUT
+#Calculate heterozygosity and inbreeding coefficient per individual
+vcftools --gzvcf $VCF --het --out $OUT
+
+```
