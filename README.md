@@ -66,4 +66,7 @@ Vietnam
 
 <img width="920" height="600" src="https://github.com/vincentmanz/Ginseng/blob/main/Figures/Figure%204%20Admixture%20average%20on%20map.png?raw=true">
 
+**Figure 4** Map showing Panax vietnamensis population sampling
+locations with average admixture plots K = 2.
+
 </p>
