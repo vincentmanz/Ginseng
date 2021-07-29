@@ -70,7 +70,7 @@ Vietnam
 locations with average admixture plots K =
 2.
 
-<img width="920" height="600" src="https://github.com/vincentmanz/Ginseng/blob/main/Figures/Figure%205%20PCA%20wild%20vs%20cultivated.png?raw=true">
+<img  src="https://github.com/vincentmanz/Ginseng/blob/main/Figures/Figure%205%20PCA%20wild%20vs%20cultivated.png?raw=true">
 
 **Figure 5.** PCA of Panax vietnamensis populations showing wild (red)
 versus cultivated (blue) samples.
