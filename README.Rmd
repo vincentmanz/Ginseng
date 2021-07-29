@@ -38,7 +38,7 @@ Keywords: Crop domestication; Ginseng; Panax; Population genomics; Vietnam
 # Figures
 
 <p align="center">
-<img width="920" height="600" src="https://github.com/vincentmanz/Ginseng/blob/main/Figures/Figure%204%20Admixture%20average%20on%20map.pdf?raw=true">
+<img width="920" height="600" src="https://github.com/vincentmanz/Ginseng/blob/main/Figures/Figure%204%20Admixture%20average%20on%20map.png?raw=true">
 </p>
 
 
