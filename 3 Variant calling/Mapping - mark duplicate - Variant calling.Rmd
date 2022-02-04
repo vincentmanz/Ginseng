@@ -139,7 +139,7 @@ VCF_OUT=deepvariant.cohort_filtered.vcf.gz
 # set filters
 MAF=0.10
 MISS=0.8
-QUAL=30
+QUAL=50
 MIN_DEPTH=30
 # move to the vcf directory
 cd vcftools
